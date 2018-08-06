@@ -12,11 +12,11 @@ declare let mUtil: any;
 
 @Component({
   selector: '.m-grid.m-grid--hor.m-grid--root.m-page',
-  templateUrl: './templates/login-1.component.html',
+  templateUrl: './templates/login-3.component.html',
   encapsulation: ViewEncapsulation.None,
 })
 
-export class AuthComponent implements OnInit {
+export class RegistrationComponent implements OnInit {
   model: any = {};
   loading = false;
   returnUrl: string;
@@ -41,8 +41,7 @@ export class AuthComponent implements OnInit {
   ngOnInit() {
     this.model.remember = true;
     // get return url from route parameters or default to '/'
-    this.returnUrl = this._route.snapshot.queryParams['returnUrl'] || '/';
-    this._router.navigate([this.returnUrl]);
+ 
 
     this._script.loadScripts('body', [
       'assets/vendors/base/vendors.bundle.js',

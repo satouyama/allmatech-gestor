@@ -14,6 +14,10 @@ const routes: Routes = [
         'loadChildren': '.\/pages\/default\/blank\/blank.module#BlankModule',
       },
       {
+        'path': 'clientes',
+        'loadChildren': '.\/pages\/default\/cliente\/cliente.module#ClienteModule',
+      },
+      {
         'path': '',
         'redirectTo': 'index',
         'pathMatch': 'full',
@@ -25,6 +29,11 @@ const routes: Routes = [
     'redirectTo': 'index',
     'pathMatch': 'full',
   },
+  {
+    'path': '**',
+    'redirectTo': 'cliente',
+    'pathMatch': 'full',
+  }
 ];
 
 @NgModule({

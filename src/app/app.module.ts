@@ -11,6 +11,9 @@ import { ThemeRoutingModule } from "./theme/theme-routing.module";
 import { AuthModule } from "./auth/auth.module";
 import { Config } from './config/config';
 import { HttpClientModule } from '@angular/common/http';
+import { RegistrationModule } from './auth/registration.module';
+import { NgxMaskModule } from 'ngx-mask'
+
 
 @NgModule({
   declarations: [
@@ -18,13 +21,16 @@ ThemeComponent,
     AppComponent,
   ],
   imports: [
-LayoutModule,
+    NgxMaskModule.forRoot(),
+    LayoutModule,
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
     ThemeRoutingModule,
     AuthModule,
-    HttpClientModule
+    RegistrationModule,
+    HttpClientModule,
+    
   ],
   providers: [ScriptLoaderService,Config],
   bootstrap: [AppComponent]
