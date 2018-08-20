@@ -20,6 +20,7 @@ export class RegistrationComponent implements OnInit {
   model: any = {};
   loading = false;
   returnUrl: string;
+  name = '';
 
   @ViewChild('alertSignin',
       {read: ViewContainerRef}) alertSignin: ViewContainerRef;

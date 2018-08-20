@@ -8,7 +8,7 @@
 			<div class="m-portlet__head-caption">
 				<div class="m-portlet__head-title">
 					<h3 class="m-portlet__head-text">
-						Cadastro de novo cliente
+						CADASTRO DE NOVO CLIENTE
 					</h3>
 				</div>
 			</div>
@@ -46,7 +46,7 @@
 								<div class="m-wizard__steps">
 									<div class="m-wizard__step m-wizard__step--current" m-wizard-target="m_wizard_form_step_1">
 										<div class="m-wizard__step-info">
-											<a href="#" class="m-wizard__step-number">
+											<a  class="m-wizard__step-number">
 												<span>
 													<span>
 														1
@@ -63,7 +63,7 @@
 									</div>
 									<div class="m-wizard__step" m-wizard-target="m_wizard_form_step_2">
 										<div class="m-wizard__step-info">
-											<a href="#" class="m-wizard__step-number">
+											<a  class="m-wizard__step-number">
 												<span>
 													<span>
 														2
@@ -80,7 +80,7 @@
 									</div>
 									<div class="m-wizard__step" m-wizard-target="m_wizard_form_step_3">
 										<div class="m-wizard__step-info">
-											<a href="#" class="m-wizard__step-number">
+											<a  class="m-wizard__step-number">
 												<span>
 													<span>
 														3
@@ -91,16 +91,51 @@
 												<span></span>
 											</div>
 											<div class="m-wizard__step-label">
-												Billing Setup
+											Perfil Comercial
 											</div>
 										</div>
 									</div>
+									<div class="m-wizard__step" m-wizard-target="dadosSite">
+											<div class="m-wizard__step-info">
+												<a class="m-wizard__step-number">
+													<span>
+														<span>
+															4
+														</span>
+													</span>
+												</a>
+												<div class="m-wizard__step-line">
+													<span></span>
+												</div>
+												<div class="m-wizard__step-label">
+													Dados do Site
+												</div>
+											</div>
+										</div>
+
+										<div class="m-wizard__step" m-wizard-target="dadosIntegracao">
+												<div class="m-wizard__step-info">
+													<a class="m-wizard__step-number">
+														<span>
+															<span>
+																5
+															</span>
+														</span>
+													</a>
+													<div class="m-wizard__step-line">
+														<span></span>
+													</div>
+													<div class="m-wizard__step-label">
+														Dados de integração
+													</div>
+												</div>
+											</div>
 									<div class="m-wizard__step" m-wizard-target="m_wizard_form_step_4">
 										<div class="m-wizard__step-info">
-											<a href="#" class="m-wizard__step-number">
+											<a class="m-wizard__step-number">
 												<span>
 													<span>
-														4
+														6
 													</span>
 												</span>
 											</a>
@@ -108,7 +143,7 @@
 												<span></span>
 											</div>
 											<div class="m-wizard__step-label">
-												Confirmation
+												Confirmação
 											</div>
 										</div>
 									</div>
@@ -160,7 +195,7 @@
 													Razão Social
 												</label>
 												<div class="col-xl-9 col-lg-9">
-													<input type="email" name="email" class="form-control m-input" placeholder="" value="nick.stone@gmail.com">
+													<input type="email" name="email" class="form-control m-input" placeholder="" value="">
 													<span class="m-form__help">
 														
 													</span>
@@ -198,7 +233,7 @@
 													* Email : 
 												</label>
 												<div class="col-xl-9 col-lg-9">
-													<input type="email" name="email" class="form-control m-input" placeholder=""  value="nick.stone@gmail.com">
+													<input type="email" name="email" class="form-control m-input" placeholder=""  value="">
 													<span class="m-form__help">
 													  e-mail de contato
 													</span>
@@ -209,7 +244,7 @@
 													Endereço
 												</label>
 												<div class="col-xl-9 col-lg-9">
-													<input type="text" name="address2" class="form-control m-input" placeholder="" value="P.O. Box 942873 Sacramento, CA 94273-0001">
+													<input type="text" name="address2" class="form-control m-input" placeholder="" value="">
 													<span class="m-form__help">
 													  Endereço
 													</span>
@@ -220,7 +255,7 @@
 													* Cidade :
 												</label>
 												<div class="col-xl-9 col-lg-9">
-													<input type="text" name="city" class="form-control m-input" placeholder="" value="Polo Alto">
+													<input type="text" name="city" class="form-control m-input" placeholder="" value="">
 												</div>
 											</div>
 											<div class="form-group m-form__group row">
@@ -228,7 +263,7 @@
 													* Estado :
 												</label>
 												<div class="col-xl-9 col-lg-9">
-													<input type="text" name="state" class="form-control m-input" placeholder="" value="California">
+													<input type="text" name="state" class="form-control m-input" placeholder="" value="">
 												</div>
 											</div>
 
@@ -237,7 +272,7 @@
 													* CEP :
 												</label>
 												<div class="col-xl-9 col-lg-9">
-													<input type="text" name="cep" class="form-control m-input" mask="00000-000"  placeholder="" value="California">
+													<input type="text" name="cep" class="form-control m-input" mask="00000-000"  placeholder="" value="">
 												</div>
 											</div>
 								
@@ -256,7 +291,7 @@
 													<label class="form-control-label">
 														Responsável / Decisor
 													</label>
-													<input type="text" name="name" class="form-control m-input" placeholder="" value="http://sinortech.vertoffice.com">
+													<input type="text" name="name" class="form-control m-input" placeholder="" value="">
 													<span class="m-form__help">
 														Informação do resposável ou decisor 
 													</span>
@@ -293,89 +328,46 @@
 											</div>
 											<div class="form-group m-form__group row">
 												<label class="col-xl-3 col-lg-3 col-form-label">
-													* Email : 
+													* Email de contato : 
 												</label>
 												<div class="col-lg-12">
-													<input type="email" name="email" class="form-control m-input" placeholder=""  value="nick.stone@gmail.com">
+													<input type="email" name="email" class="form-control m-input" placeholder=""  value="">
 													<span class="m-form__help">
 													  e-mail de contato
 													</span>
 												</div>
 											</div>
-											<div class="form-group m-form__group row">
-												<div class="col-lg-6 m-form__group-sub">
-													<label class="form-control-label">
-														* Username:
-													</label>
-													<input type="text" name="account_username" class="form-control m-input" placeholder="" value="nick.stone">
-													<span class="m-form__help">
-														Your username to login to your dashboard
-													</span>
-												</div>
-												<div class="col-lg-6 m-form__group-sub">
-													<label class="form-control-label">
-														* Password:
-													</label>
-													<input type="password" name="account_password" class="form-control m-input" placeholder="" value="qwerty">
-													<span class="m-form__help">
-														Please use letters and at least one number and symbol
-													</span>
-												</div>
-											</div>
+									
 										</div>
 										<div class="m-separator m-separator--dashed m-separator--lg"></div>
 										<div class="m-form__section">
 											<div class="m-form__heading">
 												<h3 class="m-form__heading-title">
-													Client Settings
+													Dados Financeiros
 												</h3>
 											</div>
 											<div class="form-group m-form__group row">
 												<div class="col-lg-6 m-form__group-sub">
 													<label class="form-control-label">
-														* User Group:
+															Os mesmos dados que os dos RESPONSÁVEIS?
 													</label>
 													<div class="m-radio-inline">
 														<label class="m-radio m-radio--solid m-radio--brand">
 															<input type="radio" name="account_group" checked="" value="2">
-															Sales Person
+															Não
 															<span></span>
 														</label>
 														<label class="m-radio m-radio--solid m-radio--brand">
 															<input type="radio" name="account_group" value="2">
-															Customer
+															Sim
 															<span></span>
 														</label>
 													</div>
 													<span class="m-form__help">
-														Please select user group
+													Porfavor selecione uma opção
 													</span>
 												</div>
-												<div class="col-lg-6 m-form__group-sub">
-													<label class="form-control-label">
-														Perfil Comercial
-													</label>
-													<div class="m-checkbox-inline">
-														<label class="m-checkbox m-checkbox--solid m-checkbox--brand">
-															<input type="checkbox" name="account_communication[]" checked value="email">
-															Email
-															<span></span>
-														</label>
-														<label class="m-checkbox m-checkbox--solid  m-checkbox--brand">
-															<input type="checkbox" name="account_communication[]" value="sms">
-															SMS
-															<span></span>
-														</label>
-														<label class="m-checkbox m-checkbox--solid  m-checkbox--brand">
-															<input type="checkbox" name="account_communication[]" value="phone">
-															Phone
-															<span></span>
-														</label>
-													</div>
-													<span class="m-form__help">
-														Please select user communication options
-													</span>
-												</div>
+											
 											</div>
 										</div>
 									</div>
@@ -384,17 +376,10 @@
 										<div class="m-form__section m-form__section--first">
 											<div class="m-form__heading">
 												<h3 class="m-form__heading-title">
-													Billing Information
+												 Usuários do sistema
 												</h3>
 											</div>
-											<div class="form-group m-form__group row">
-												<div class="col-lg-12">
-													<label class="form-control-label">
-														* Cardholder Name:
-													</label>
-													<input type="text" name="billing_card_name" class="form-control m-input" placeholder="" value="Nick Stone">
-												</div>
-											</div>
+										
 											<div class="form-group m-form__group row">
 												<div class="col-lg-12">
 													<label class="form-control-label">
@@ -437,105 +422,132 @@
 													<i data-toggle="m-tooltip" data-width="auto" class="m-form__heading-help-icon flaticon-info" title="If different than the corresponding address"></i>
 												</h3>
 											</div>
-											<div class="form-group m-form__group row">
-												<div class="col-lg-12">
+											<div class="col-lg-6 m-form__group-sub">
 													<label class="form-control-label">
-														* Address 1:
+															Possui imóveis para locação?
 													</label>
-													<input type="text" name="billing_address_1" class="form-control m-input" placeholder="" value="Headquarters 1120 N Street Sacramento 916-654-5266">
-												</div>
-											</div>
-											<div class="form-group m-form__group row">
-												<div class="col-lg-12">
-													<label class="form-control-label">
-														Address 2:
-													</label>
-													<input type="text" name="billing_address_2" class="form-control m-input" placeholder="" value="P.O. Box 942873 Sacramento, CA 94273-0001">
-												</div>
-											</div>
-											<div class="form-group m-form__group row">
-												<div class="col-lg-5 m-form__group-sub">
-													<label class="form-control-label">
-														* City:
-													</label>
-													<input type="text" class="form-control m-input" name="billing_city" placeholder="" value="Polo Alto">
-												</div>
-												<div class="col-lg-5 m-form__group-sub">
-													<label class="form-control-label">
-														* State:
-													</label>
-													<input type="text" class="form-control m-input" name="billing_state" placeholder="" value="California">
-												</div>
-												<div class="col-lg-2 m-form__group-sub">
-													<label  class="form-control-label">
-														* ZIP:
-													</label>
-													<input type="text" class="form-control m-input" name="billing_zip" placeholder="" value="34890">
-												</div>
-											</div>
-										</div>
-										<div class="m-separator m-separator--dashed m-separator--lg"></div>
-										<div class="m-form__section">
-											<div class="m-form__heading">
-												<h3 class="m-form__heading-title">
-													Delivery Type
-												</h3>
-											</div>
-											<div class="form-group m-form__group">
-												<div class="row">
-													<div class="col-lg-6">
-														<label class="m-option">
-															<span class="m-option__control">
-																<span class="m-radio m-radio--state-brand">
-																	<input type="radio" name="billing_delivery" value="">
-																	<span></span>
-																</span>
-															</span>
-															<span class="m-option__label">
-																<span class="m-option__head">
-																	<span class="m-option__title">
-																		Standart Delevery
-																	</span>
-																	<span class="m-option__focus">
-																		Free
-																	</span>
-																</span>
-																<span class="m-option__body">
-																	Estimated 14-20 Day Shipping  	                                                (&nbsp;Duties end taxes may be due  	                                                upon delivery&nbsp;)
-																</span>
-															</span>
+													<div class="m-radio-inline">
+														<label class="m-radio m-radio--solid m-radio--brand">
+															<input type="radio" name="account_group" checked="" value="2">
+															Não
+															<span></span>
+														</label>
+														<label class="m-radio m-radio--solid m-radio--brand">
+															<input type="radio" name="account_group" value="2">
+															Sim
+															<span></span>
 														</label>
 													</div>
-													<div class="col-lg-6">
-														<label class="m-option">
-															<span class="m-option__control">
-																<span class="m-radio m-radio--state-brand">
-																	<input type="radio" name="billing_delivery" value="">
-																	<span></span>
-																</span>
-															</span>
-															<span class="m-option__label">
-																<span class="m-option__head">
-																	<span class="m-option__title">
-																		Fast Delevery
-																	</span>
-																	<span class="m-option__focus">
-																		$&nbsp;8.00
-																	</span>
-																</span>
-																<span class="m-option__body">
-																	Estimated 2-5 Day Shipping 	                                                (&nbsp;Duties end taxes may be due 	                                                upon delivery&nbsp;)
-																</span>
-															</span>
+													<span class="m-form__help">
+													Porfavor selecione uma opção
+													</span>
+												</div>
+												<div class="col-lg-6 m-form__group-sub">
+														<label class="form-control-label">
+																Possui imóveis para Venda?
 														</label>
+														<div class="m-radio-inline">
+															<label class="m-radio m-radio--solid m-radio--brand">
+																<input type="radio" name="account_group" checked="" value="2">
+																Não
+																<span></span>
+															</label>
+															<label class="m-radio m-radio--solid m-radio--brand">
+																<input type="radio" name="account_group" value="2">
+																Sim
+																<span></span>
+															</label>
+														</div>
+														<span class="m-form__help">
+														Porfavor selecione uma opção
+														</span>
 													</div>
-												</div>
-												<div class="m-form__help">
-													<!--must use this helper element to display error message for the options-->
-												</div>
-											</div>
+                                             
+													<div class="form-group m-form__group row">
+															<div class="col-lg-12">
+																<label class="form-control-label">
+																		Quantos imóveis administrados?
+																</label>
+																<input type="text" name="users" class="form-control m-input" placeholder="" value="">
+																<span class="m-form__help">
+																 Quantidade de imóveis administrados
+																</span>
+															</div>
+														</div><br/>
+
+														<div class="col-lg-6 m-form__group-sub">
+																<label class="form-control-label">
+																		Usa algum Integrador?
+																</label>
+																<div class="m-radio-inline">
+																	<label class="m-radio m-radio--solid m-radio--brand">
+																		<input type="radio" name="account_group" checked="" value="2">
+																		Não
+																		<span></span>
+																	</label>
+																	<label class="m-radio m-radio--solid m-radio--brand">
+																		<input type="radio" name="account_group" value="2">
+																		Sim
+																		<span></span>
+																	</label>
+																</div>
+																<span class="m-form__help">
+																Porfavor selecione uma opção
+																</span>
+															</div><br/>
+
+															<div class="col-lg-6 m-form__group-sub">
+																	<label class="form-control-label">
+																			Usa algum Software de Gestão ?
+																	</label>
+																	<div class="m-radio-inline">
+																		<label class="m-radio m-radio--solid m-radio--brand">
+																			<input type="radio" name="account_group" checked="" value="2">
+																			Não
+																			<span></span>
+																		</label>
+																		<label class="m-radio m-radio--solid m-radio--brand">
+																			<input type="radio" name="account_group" value="2">
+																			Sim
+																			<span></span>
+																		</label>
+																	</div>
+																	<span class="m-form__help">
+																	Porfavor selecione uma opção
+																	</span>
+																</div><br/>
+
+
+																<div class="col-lg-6 m-form__group-sub">
+																		<label class="form-control-label">
+																				Possui site?
+																		</label>
+																		<div class="m-radio-inline">
+																			<label class="m-radio m-radio--solid m-radio--brand">
+																				<input type="radio" name="account_group" checked="" value="2">
+																				Não
+																				<span></span>
+																			</label>
+																			<label class="m-radio m-radio--solid m-radio--brand">
+																				<input type="radio" name="account_group" value="2">
+																				Sim
+																				<span></span>
+																			</label>
+																		</div>
+																		<span class="m-form__help">
+																		Porfavor selecione uma opção
+																		</span>
+																	</div><br/>
+
+										
 										</div>
+									
+										
 									</div>
+
+
+
+
 									<!--end: Form Wizard Step 3--> 								 								<!--begin: Form Wizard Step 4-->
 									<div class="m-wizard__form-step" id="m_wizard_form_step_4">
 										<!--begin::Section-->
@@ -547,339 +559,190 @@
 														<i class="fa flaticon-user-ok"></i>
 													</span>
 													<span class="m-accordion__item-title">
-														1. Client Information
+															Descrição de Venda
 													</span>
 													<span class="m-accordion__item-mode"></span>
 												</div>
-												<div class="m-accordion__item-body collapse show" id="m_accordion_1_item_1_body">
-													<!--begin::Content-->
-													<div class="tab-content active  m--padding-30">
-														<div class="m-form__section m-form__section--first">
-															<div class="m-form__heading">
-																<h4 class="m-form__heading-title">
-																	Client Details
-																</h4>
-															</div>
-															<div class="form-group m-form__group m-form__group--sm row">
-																<label class="col-xl-4 col-lg-4 col-form-label">
-																	Name:
-																</label>
-																<div class="col-xl-8 col-lg-8">
-																	<span class="m-form__control-static">
-																		Nick Stone
+												<div class="form-group m-form__group">
+														<div class="row">
+															<div class="col-lg-6">
+																<label class="m-option">
+																	<span class="m-option__control">
+																		<span class="m-radio m-radio--state-brand">
+																			<input type="radio" name="billing_delivery" value="">
+																			<span></span>
+																		</span>
 																	</span>
-																</div>
-															</div>
-															<div class="form-group m-form__group m-form__group--sm row">
-																<label class="col-xl-4 col-lg-4 col-form-label">
-																	Email:
-																</label>
-																<div class="col-xl-8 col-lg-8">
-																	<span class="m-form__control-static">
-																		nick.stone@gmail.com
+																	<span class="m-option__label">
+																		<span class="m-option__head">
+																			<span class="m-option__title">
+																	             Básico
+																			</span>
+																			<span class="m-option__focus">
+																					R$ 79,90
+																			</span>
+																		</span>
+																		<span class="m-option__body">
+																			
+																		</span>
 																	</span>
-																</div>
-															</div>
-															<div class="form-group m-form__group m-form__group--sm row">
-																<label class="col-xl-4 col-lg-4 col-form-label">
-																	Phone
 																</label>
-																<div class="col-xl-8 col-lg-8">
-																	<span class="m-form__control-static">
-																		+206-78-55034890
-																	</span>
-																</div>
 															</div>
+															<div class="col-lg-6">
+																<label class="m-option">
+																	<span class="m-option__control">
+																		<span class="m-radio m-radio--state-brand">
+																			<input type="radio" name="billing_delivery" value="">
+																			<span></span>
+																		</span>
+																	</span>
+																	<span class="m-option__label">
+																		<span class="m-option__head">
+																			<span class="m-option__title">
+																					TOP 
+																			</span>
+																			<span class="m-option__focus">
+																					R$ 109,90
+																			</span>
+																		</span>
+																		<span class="m-option__body">
+																		                                        
+																		</span>
+																	</span>
+																</label>
+															</div>
+
+															<div class="col-lg-6">
+																	<label class="m-option">
+																		<span class="m-option__control">
+																			<span class="m-radio m-radio--state-brand">
+																				<input type="radio" name="billing_delivery" value="">
+																				<span></span>
+																			</span>
+																		</span>
+																		<span class="m-option__label">
+																			<span class="m-option__head">
+																				<span class="m-option__title">
+																						PREMIUM
+																				</span>
+																				<span class="m-option__focus">
+																						R$ 129,90
+																				</span>
+																			</span>
+																			<span class="m-option__body">
+																													
+																			</span>
+																		</span>
+																	</label>
+																</div>
 														</div>
-														<div class="m-separator m-separator--dashed m-separator--lg"></div>
-														<div class="m-form__section">
-															<div class="m-form__heading">
-																<h4 class="m-form__heading-title">
-																	Corresponding Address
-																	<i data-toggle="m-tooltip" class="m-form__heading-help-icon flaticon-info" title="Some help text goes here"></i>
-																</h4>
-															</div>
-															<div class="form-group m-form__group m-form__group--sm row">
-																<label class="col-xl-4 col-lg-4 col-form-label">
-																	Address Line 1:
+														<div class="col-lg-6 m-form__group-sub">
+																<label class="form-control-label">
+																	* SERVIÇOS
 																</label>
-																<div class="col-xl-8 col-lg-8">
-																	<span class="m-form__control-static">
-																		Headquarters 1120 N Street Sacramento 916-654-5266
-																	</span>
+																<div class="m-checkbox-inline">
+																	<label class="m-checkbox m-checkbox--solid m-checkbox--brand">
+																		<input type="checkbox" name="account_communication[]" checked value="email">
+																		Ativação R$ 300
+																		<span></span>
+																	</label>
+																	<label class="m-checkbox m-checkbox--solid  m-checkbox--brand">
+																		<input type="checkbox" name="account_communication[]" value="sms">
+																		Importação 
+																		<span></span>
+																	</label>
+																	<label class="m-checkbox m-checkbox--solid  m-checkbox--brand">
+																		 <input type="checkbox" name="account_communication[]" value="phone">
+																	Outros
+																		<span></span>
+																	</label>
 																</div>
-															</div>
-															<div class="form-group m-form__group m-form__group--sm row">
-																<label class="col-xl-4 col-lg-4 col-form-label">
-																	Address Line 2:
-																</label>
-																<div class="col-xl-8 col-lg-8">
-																	<span class="m-form__control-static">
-																		P.O. Box 942873 Sacramento, CA 94273-0001
-																	</span>
+																<span class="m-form__help">
+															
+																</span>
+															</div><br/>
+
+															<div class="form-group m-form__group row">
+																	<label class="col-xl-3 col-lg-3 col-form-label">
+																		* Quantos imóveis administrados?
+																	</label>
+																	<div class="col-xl-9 col-lg-9">
+																		<input type="email" name="email" class="form-control m-input" placeholder=""  value="">
+																		<span class="m-form__help">
+																		 Quantidade de imóveis administrados
+																		</span>
+																	</div>
 																</div>
-															</div>
-															<div class="form-group m-form__group m-form__group--sm row">
-																<label class="col-xl-4 col-lg-4 col-form-label">
-																	City:
-																</label>
-																<div class="col-xl-8 col-lg-8">
-																	<span class="m-form__control-static">
-																		Polo Alto
+
+															<div class="col-lg-6 m-form__group-sub">
+																	<label class="form-control-label">
+																		* Data de vencimento
+																	</label>
+																	<div class="m-checkbox-inline">
+																		<label class="m-checkbox m-checkbox--solid m-checkbox--brand">
+																			<input type="checkbox" name="account_communication[]" checked value="email">
+																			10
+																			<span></span>
+																		</label>
+																		<label class="m-checkbox m-checkbox--solid  m-checkbox--brand">
+																			<input type="checkbox" name="account_communication[]" value="sms">
+																	15
+																			<span></span>
+																		</label>
+																		<label class="m-checkbox m-checkbox--solid  m-checkbox--brand">
+																			 <input type="checkbox" name="account_communication[]" value="phone">
+																		20
+																			<span></span>
+																		</label>
+																	</div>
+																	<div class="form-group m-form__group row">
+																			<label class="col-xl-3 col-lg-3 col-form-label">
+																				* Email para recebimento de boletos: 
+																			</label>
+																			<div class="col-xl-9 col-lg-9">
+																				<input type="email" name="email" class="form-control m-input" placeholder=""  value="">
+																				<span class="m-form__help">
+																				  e-mail para recebimento de boletos
+																				</span>
+																			</div>
+																		</div>
+
+																		<div class="form-group m-form__group row">
+																				<label class="col-xl-3 col-lg-3 col-form-label">
+																					* Nome do vendedor
+																				</label>
+																				<div class="col-xl-9 col-lg-9">
+																					<input type="email" name="email" class="form-control m-input" placeholder=""  value="">
+																					<span class="m-form__help">
+																					 Nome do vendedor 
+																					</span>
+																				</div>
+																			</div>
+
+																			<div class="form-group m-form__group row">
+																					<label class="col-xl-3 col-lg-3 col-form-label">
+																							Observações importantes?
+																					</label>
+																					<div class="col-xl-9 col-lg-9">
+																							<textarea class="form-control m-input" rows="5" id="comment"></textarea>
+																						<span class="m-form__help">
+																						 Nome do vendedor 
+																						</span>
+																					</div>
+																				</div>
+																	<span class="m-form__help">
+																
 																	</span>
-																</div>
-															</div>
-															<div class="form-group m-form__group m-form__group--sm row">
-																<label class="col-xl-4 col-lg-4 col-form-label">
-																	State:
-																</label>
-																<div class="col-xl-8 col-lg-8">
-																	<span class="m-form__control-static">
-																		California
-																	</span>
-																</div>
-															</div>
-															<div class="form-group m-form__group m-form__group--sm row">
-																<label class="col-xl-4 col-lg-4 col-form-label">
-																	Country:
-																</label>
-																<div class="col-xl-8 col-lg-8">
-																	<span class="m-form__control-static">
-																		USA
-																	</span>
-																</div>
-															</div>
+																</div><br/>
+														<div class="m-form__help">
+															<!--must use this helper element to display error message for the options-->
 														</div>
 													</div>
-													<!--end::Section-->
-												</div>
 											</div>
 											<!--end::Item--> 										<!--begin::Item-->
-											<div class="m-accordion__item">
-												<div class="m-accordion__item-head collapsed" role="tab" id="m_accordion_1_item_2_head" data-toggle="collapse" href="#m_accordion_1_item_2_body" aria-expanded="    false">
-													<span class="m-accordion__item-icon">
-														<i class="fa  flaticon-placeholder"></i>
-													</span>
-													<span class="m-accordion__item-title">
-														2. Account Setup
-													</span>
-													<span class="m-accordion__item-mode"></span>
-												</div>
-												<div class="m-accordion__item-body collapse" id="m_accordion_1_item_2_body">
-													<!--begin::Content-->
-													<div class="tab-content  m--padding-30">
-														<div class="m-form__section m-form__section--first">
-															<div class="m-form__heading">
-																<h4 class="m-form__heading-title">
-																	Account Details
-																</h4>
-															</div>
-															<div class="form-group m-form__group m-form__group--sm row">
-																<label class="col-xl-4 col-lg-4 col-form-label">
-																	URL:
-																</label>
-																<div class="col-xl-8 col-lg-8">
-																	<span class="m-form__control-static">
-																		sinortech.vertoffice.com
-																	</span>
-																</div>
-															</div>
-															<div class="form-group m-form__group m-form__group--sm row">
-																<label class="col-xl-4 col-lg-4 col-form-label">
-																	Username:
-																</label>
-																<div class="col-xl-8 col-lg-8">
-																	<span class="m-form__control-static">
-																		sinortech.admin
-																	</span>
-																</div>
-															</div>
-															<div class="form-group m-form__group m-form__group--sm row">
-																<label class="col-xl-4 col-lg-4 col-form-label">
-																	Password:
-																</label>
-																<div class="col-xl-8 col-lg-8">
-																	<span class="m-form__control-static">
-																		*********
-																	</span>
-																</div>
-															</div>
-														</div>
-														<div class="m-separator m-separator--dashed m-separator--lg"></div>
-														<div class="m-form__section">
-															<div class="m-form__heading">
-																<h4 class="m-form__heading-title">
-																	Client Settings
-																</h4>
-															</div>
-															<div class="form-group m-form__group m-form__group--sm row">
-																<label class="col-xl-4 col-lg-4 col-form-label">
-																	User Group:
-																</label>
-																<div class="col-xl-8 col-lg-8">
-																	<span class="m-form__control-static">
-																		Customer
-																	</span>
-																</div>
-															</div>
-															<div class="form-group m-form__group m-form__group--sm row">
-																<label class="col-xl-4 col-lg-4 col-form-label">
-																	Communications:
-																</label>
-																<div class="col-xl-8 col-lg-8">
-																	<span class="m-form__control-static">
-																		Phone, Email
-																	</span>
-																</div>
-															</div>
-														</div>
-													</div>
-													<!--end::Content-->
-												</div>
-											</div>
+									
 											<!--end::Item-->  										<!--begin::Item-->
-											<div class="m-accordion__item">
-												<div class="m-accordion__item-head collapsed" role="tab" id="m_accordion_1_item_3_head" data-toggle="collapse" href="#m_accordion_1_item_3_body" aria-expanded="    false">
-													<span class="m-accordion__item-icon">
-														<i class="fa  flaticon-placeholder"></i>
-													</span>
-													<span class="m-accordion__item-title">
-														3. Billing Setup
-													</span>
-													<span class="m-accordion__item-mode"></span>
-												</div>
-												<div class="m-accordion__item-body collapse" id="m_accordion_1_item_3_body">
-													<!--begin::Content-->
-													<div class="tab-content  m--padding-30">
-														<div class="m-form__section m-form__section--first">
-															<div class="m-form__heading">
-																<h4 class="m-form__heading-title">
-																	Billing Information
-																</h4>
-															</div>
-															<div class="form-group m-form__group m-form__group--sm row">
-																<label class="col-xl-4 col-lg-4 col-form-label">
-																	Cardholder Name:
-																</label>
-																<div class="col-xl-8 col-lg-8">
-																	<span class="m-form__control-static">
-																		Nick Stone
-																	</span>
-																</div>
-															</div>
-															<div class="form-group m-form__group m-form__group--sm row">
-																<label class="col-xl-4 col-lg-4 col-form-label">
-																	Card Number:
-																</label>
-																<div class="col-xl-8 col-lg-8">
-																	<span class="m-form__control-static">
-																		*************4589
-																	</span>
-																</div>
-															</div>
-															<div class="form-group m-form__group m-form__group--sm row">
-																<label class="col-xl-4 col-lg-4 col-form-label">
-																	Exp Month:
-																</label>
-																<div class="col-xl-8 col-lg-8">
-																	<span class="m-form__control-static">
-																		10
-																	</span>
-																</div>
-															</div>
-															<div class="form-group m-form__group m-form__group--sm row">
-																<label class="col-xl-4 col-lg-4 col-form-label">
-																	Exp Year:
-																</label>
-																<div class="col-xl-8 col-lg-8">
-																	<span class="m-form__control-static">
-																		2018
-																	</span>
-																</div>
-															</div>
-															<div class="form-group m-form__group m-form__group--sm row">
-																<label class="col-xl-4 col-lg-4 col-form-label">
-																	CVV:
-																</label>
-																<div class="col-xl-8 col-lg-8">
-																	<span class="m-form__control-static">
-																		***
-																	</span>
-																</div>
-															</div>
-														</div>
-														<div class="m-separator m-separator--dashed m-separator--lg"></div>
-														<div class="m-form__section">
-															<div class="m-form__heading">
-																<h4 class="m-form__heading-title">
-																	Billing Address
-																</h4>
-															</div>
-															<div class="form-group m-form__group m-form__group--sm row">
-																<label class="col-xl-4 col-lg-4 col-form-label">
-																	Address Line 1:
-																</label>
-																<div class="col-xl-8 col-lg-8">
-																	<span class="m-form__control-static">
-																		Headquarters 1120 N Street Sacramento 916-654-5266
-																	</span>
-																</div>
-															</div>
-															<div class="form-group m-form__group m-form__group--sm row">
-																<label class="col-xl-4 col-lg-4 col-form-label">
-																	Address Line 2:
-																</label>
-																<div class="col-xl-8 col-lg-8">
-																	<span class="m-form__control-static">
-																		P.O. Box 942873 Sacramento, CA 94273-0001
-																	</span>
-																</div>
-															</div>
-															<div class="form-group m-form__group m-form__group--sm row">
-																<label class="col-xl-4 col-lg-4 col-form-label">
-																	City:
-																</label>
-																<div class="col-xl-8 col-lg-8">
-																	<span class="m-form__control-static">
-																		Polo Alto
-																	</span>
-																</div>
-															</div>
-															<div class="form-group m-form__group m-form__group--sm row">
-																<label class="col-xl-4 col-lg-4 col-form-label">
-																	State:
-																</label>
-																<div class="col-xl-8 col-lg-8">
-																	<span class="m-form__control-static">
-																		California
-																	</span>
-																</div>
-															</div>
-															<div class="form-group m-form__group m-form__group--sm row">
-																<label class="col-xl-4 col-lg-4 col-form-label">
-																	ZIP:
-																</label>
-																<div class="col-xl-8 col-lg-8">
-																	<span class="m-form__control-static">
-																		37505
-																	</span>
-																</div>
-															</div>
-															<div class="form-group m-form__group m-form__group--sm row">
-																<label class="col-xl-4 col-lg-4 col-form-label">
-																	Country:
-																</label>
-																<div class="col-xl-8 col-lg-8">
-																	<span class="m-form__control-static">
-																		USA
-																	</span>
-																</div>
-															</div>
-														</div>
-													</div>
-													<!--end::Content-->
-												</div>
-											</div>
+								
 											<!--end::Item-->
 										</div>
 										<!--end::Section-->  									<!--end::Section-->
@@ -889,13 +752,465 @@
 												<div class="m-checkbox-inline">
 													<label class="m-checkbox m-checkbox--solid m-checkbox--brand">
 														<input type="checkbox" name="accept" value="1">
-														Click here to indicate that you have read and agree to the terms presented in the Terms and Conditions agreement
+														
+Clique aqui para indicar que você leu e concorda com os termos apresentados no contrato de Termos e Condições
 														<span></span>
 													</label>
 												</div>
 											</div>
 										</div>
 									</div>
+
+									<!-- end : Dados do site -->
+																		 								<!--begin: Form Wizard Step 4-->
+											<div class="m-wizard__form-step" id="dadosSite">
+													<div class="m-form__section m-form__section--first">
+														<div class="m-form__heading">
+															<h3 class="m-form__heading-title">
+															Dados do site
+															</h3>
+														</div>
+													
+														<div class="form-group m-form__group row">
+															<div class="col-lg-12">
+																<label class="form-control-label">
+																Endereço do Site
+																</label>
+																<input type="text" name="site" class="form-control m-input" placeholder="" value="">
+																<span class="m-form__help">
+																 URL do site
+																</span>
+															</div>
+														</div> <br/>
+
+														<div class="form-group m-form__group row">
+																<div class="col-lg-12">
+																	<label class="form-control-label">
+																			Quem Administra?
+																	</label>
+																	<input type="text" name="site" class="form-control m-input" placeholder="" value="">
+																	<span class="m-form__help">
+																	Administrador do site
+																	</span>
+																</div>
+															</div> <br/>
+
+															<div class="form-group m-form__group row">
+																	<div class="col-lg-12">
+																		<label class="form-control-label">
+																				E-mail do Administrador do Site
+																		</label>
+																		<input type="text" name="mail" class="form-control m-input" placeholder="" value="">
+																		<span class="m-form__help">
+																		E-mail
+																		</span>
+																	</div>
+																</div> <br/>
+
+																<div class="col-lg-6 m-form__group-sub">
+																		<label class="form-control-label">
+																				Deseja site?
+																		</label>
+																		<div class="m-radio-inline">
+																			<label class="m-radio m-radio--solid m-radio--brand">
+																				<input type="radio" name="account_group" checked="" value="2">
+																				Não
+																				<span></span>
+																			</label>
+																			<label class="m-radio m-radio--solid m-radio--brand">
+																				<input type="radio" name="account_group" value="2">
+																				Sim
+																				<span></span>
+																			</label>
+																		</div>
+																		<span class="m-form__help">
+																		Porfavor selecione uma opção
+																		</span>
+																	</div> <br/>
+
+																	<div class="col-lg-6 m-form__group-sub">
+																			<label class="form-control-label">
+																					Local de hospedagem?
+																			</label>
+																			<div class="m-checkbox-inline">
+																				<label class="m-checkbox m-checkbox--solid m-checkbox--brand">
+																					<input type="checkbox" name="account_communication[]" checked value="email">
+																					REGISTRO BR
+																					<span></span>
+																				</label>
+																				<label class="m-checkbox m-checkbox--solid  m-checkbox--brand">
+																					<input type="checkbox" name="account_communication[]" value="sms">
+																					GODADDY
+																					<span></span>
+																				</label>
+																				<label class="m-checkbox m-checkbox--solid  m-checkbox--brand">
+																					<input type="checkbox" name="account_communication[]" value="phone">
+																					Outro
+																					<span></span>
+																				</label>
+																			</div>
+																			<span class="m-form__help">
+																			 Selecione uma opção
+																			</span>
+																		</div> <br/>
+
+												
+																		
+
+																		<div class="col-lg-6 m-form__group-sub">
+																				<label class="form-control-label">
+																						Possui e-mail vinculado?
+																				</label>
+																				<div class="m-radio-inline">
+																					<label class="m-radio m-radio--solid m-radio--brand">
+																						<input type="radio" name="account_group" checked="" value="2">
+																						Não
+																						<span></span>
+																					</label>
+																					<label class="m-radio m-radio--solid m-radio--brand">
+																						<input type="radio" name="account_group" value="2">
+																						Sim
+																						<span></span>
+																					</label>
+																				</div>
+																				<span class="m-form__help">
+																				Porfavor selecione uma opção
+																				</span>
+																			</div> <br/>
+
+																	
+													
+													</div>
+												
+													
+												
+												</div>
+
+
+
+			
+			
+													<!-- end: Dados para integração -->
+													<div class="m-wizard__form-step" id="dadosIntegracao">
+															<div class="m-form__section m-form__section--first">
+																<div class="m-form__heading">
+																	<h3 class="m-form__heading-title">
+																	 Dados para Integração
+																	</h3>
+																</div>
+															
+															
+		
+																		<div class="col-lg-6 m-form__group-sub">
+																				<label class="form-control-label">
+																						DF Imóveis?
+																				</label>
+																				<div class="m-radio-inline">
+																					<label class="m-radio m-radio--solid m-radio--brand">
+																						<input type="radio" name="gruposCount" checked="" value="nao">
+																						Não
+																						<span></span>
+																					</label>
+																					<label class="m-radio m-radio--solid m-radio--brand">
+																						<input type="radio" name="gruposCount" value="sim">
+																						Sim
+																						<span></span>
+																					</label>
+																				</div>
+																				<span class="m-form__help">
+																				Porfavor selecione uma opção
+																				</span>
+																			</div> <br/>
+
+																	
+																				
+		
+																				<div class="col-lg-6 m-form__group-sub">
+																						<label class="form-control-label">
+																								Zap?
+																						</label>
+																						<div class="m-radio-inline">
+																							<label class="m-radio m-radio--solid m-radio--brand">
+																								<input type="radio" name="account_group" checked="" value="2">
+																								Não
+																								<span></span>
+																							</label>
+																							<label class="m-radio m-radio--solid m-radio--brand">
+																								<input type="radio" name="account_group" value="2">
+																								Sim
+																								<span></span>
+																							</label>
+																						</div>
+																						<span class="m-form__help">
+																						Porfavor selecione uma opção
+																						</span>
+																					</div> <br/>
+
+																					<div class="col-lg-6 m-form__group-sub">
+																							<label class="form-control-label">
+																									Wimóveis?
+																							</label>
+																							<div class="m-radio-inline">
+																								<label class="m-radio m-radio--solid m-radio--brand">
+																									<input type="radio" name="account_group" checked="" value="2">
+																									Não
+																									<span></span>
+																								</label>
+																								<label class="m-radio m-radio--solid m-radio--brand">
+																									<input type="radio" name="account_group" value="2">
+																									Sim
+																									<span></span>
+																								</label>
+																							</div>
+																							<span class="m-form__help">
+																							Porfavor selecione uma opção
+																							</span>
+																						</div> <br/>
+																						<div class="col-lg-6 m-form__group-sub">
+																								<label class="form-control-label">
+																										ViVaReal?
+																								</label>
+																								<div class="m-radio-inline">
+																									<label class="m-radio m-radio--solid m-radio--brand">
+																										<input type="radio" name="account_group" checked="" value="2">
+																										Não
+																										<span></span>
+																									</label>
+																									<label class="m-radio m-radio--solid m-radio--brand">
+																										<input type="radio" name="account_group" value="2">
+																										Sim
+																										<span></span>
+																									</label>
+																								</div>
+																								<span class="m-form__help">
+																								Porfavor selecione uma opção
+																								</span>
+																							</div> <br/>
+
+																							<div class="col-lg-6 m-form__group-sub">
+																									<label class="form-control-label">
+																											OLX?
+																									</label>
+																									<div class="m-radio-inline">
+																										<label class="m-radio m-radio--solid m-radio--brand">
+																											<input type="radio" name="account_group" checked="" value="2">
+																											Não
+																											<span></span>
+																										</label>
+																										<label class="m-radio m-radio--solid m-radio--brand">
+																											<input type="radio" name="account_group" value="2">
+																											Sim
+																											<span></span>
+																										</label>
+																									</div>
+																									<span class="m-form__help">
+																									Porfavor selecione uma opção
+																									</span>
+																								</div> <br/>
+
+																								<div class="col-lg-6 m-form__group-sub">
+																										<label class="form-control-label">
+																												Mercado livre?
+																										</label>
+																										<div class="m-radio-inline">
+																											<label class="m-radio m-radio--solid m-radio--brand">
+																												<input type="radio" name="account_group" checked="" value="2">
+																												Não
+																												<span></span>
+																											</label>
+																											<label class="m-radio m-radio--solid m-radio--brand">
+																												<input type="radio" name="account_group" value="2">
+																												Sim
+																												<span></span>
+																											</label>
+																										</div>
+																										<span class="m-form__help">
+																										Porfavor selecione uma opção
+																										</span>
+																									</div> <br/>
+
+																									<div class="col-lg-6 m-form__group-sub">
+																											<label class="form-control-label">
+																													Lugar Certo?
+																											</label>
+																											<div class="m-radio-inline">
+																												<label class="m-radio m-radio--solid m-radio--brand">
+																													<input type="radio" name="account_group" checked="" value="2">
+																													Não
+																													<span></span>
+																												</label>
+																												<label class="m-radio m-radio--solid m-radio--brand">
+																													<input type="radio" name="account_group" value="2">
+																													Sim
+																													<span></span>
+																												</label>
+																											</div>
+																											<span class="m-form__help">
+																											Porfavor selecione uma opção
+																											</span>
+																										</div> <br/>
+
+																										
+																									<div class="col-lg-6 m-form__group-sub">
+																											<label class="form-control-label">
+																													123i ?
+																											</label>
+																											<div class="m-radio-inline">
+																												<label class="m-radio m-radio--solid m-radio--brand">
+																													<input type="radio" name="account_group" checked="" value="2">
+																													Não
+																													<span></span>
+																												</label>
+																												<label class="m-radio m-radio--solid m-radio--brand">
+																													<input type="radio" name="account_group" value="2">
+																													Sim
+																													<span></span>
+																												</label>
+																											</div>
+																											<span class="m-form__help">
+																											Porfavor selecione uma opção
+																											</span>
+																										</div> <br/>
+
+																										<div class="col-lg-6 m-form__group-sub">
+																												<label class="form-control-label">
+																														Oba ?
+																												</label>
+																												<div class="m-radio-inline">
+																													<label class="m-radio m-radio--solid m-radio--brand">
+																														<input type="radio" name="account_group" checked="" value="2">
+																														Não
+																														<span></span>
+																													</label>
+																													<label class="m-radio m-radio--solid m-radio--brand">
+																														<input type="radio" name="account_group" value="2">
+																														Sim
+																														<span></span>
+																													</label>
+																												</div>
+																												<span class="m-form__help">
+																												Porfavor selecione uma opção
+																												</span>
+																											</div> <br/>
+
+																											<div class="col-lg-6 m-form__group-sub">
+																													<label class="form-control-label">
+																															Chave Fácil?
+																													</label>
+																													<div class="m-radio-inline">
+																														<label class="m-radio m-radio--solid m-radio--brand">
+																															<input type="radio" name="account_group" checked="" value="2">
+																															Não
+																															<span></span>
+																														</label>
+																														<label class="m-radio m-radio--solid m-radio--brand">
+																															<input type="radio" name="account_group" value="2">
+																															Sim
+																															<span></span>
+																														</label>
+																													</div>
+																													<span class="m-form__help">
+																													Porfavor selecione uma opção
+																													</span>
+																												</div> <br/>
+
+																												<div class="col-lg-6 m-form__group-sub">
+																														<label class="form-control-label">
+																																DF Aqui?
+																														</label>
+																														<div class="m-radio-inline">
+																															<label class="m-radio m-radio--solid m-radio--brand">
+																																<input type="radio" name="account_group" checked="" value="2">
+																																Não
+																																<span></span>
+																															</label>
+																															<label class="m-radio m-radio--solid m-radio--brand">
+																																<input type="radio" name="account_group" value="2">
+																																Sim
+																																<span></span>
+																															</label>
+																														</div>
+																														<span class="m-form__help">
+																														Porfavor selecione uma opção
+																														</span>
+																													</div> <br/>
+
+																													<div class="col-lg-6 m-form__group-sub">
+																															<label class="form-control-label">
+																																	Univen ?
+																															</label>
+																															<div class="m-radio-inline">
+																																<label class="m-radio m-radio--solid m-radio--brand">
+																																	<input type="radio" name="account_group" checked="" value="2">
+																																	Não
+																																	<span></span>
+																																</label>
+																																<label class="m-radio m-radio--solid m-radio--brand">
+																																	<input type="radio" name="account_group" value="2">
+																																	Sim
+																																	<span></span>
+																																</label>
+																															</div>
+																															<span class="m-form__help">
+																															Porfavor selecione uma opção
+																															</span>
+																														</div> <br/>
+
+																														<div class="col-lg-6 m-form__group-sub">
+																																<label class="form-control-label">
+																																		Ubiplaces ?
+																																</label>
+																																<div class="m-radio-inline">
+																																	<label class="m-radio m-radio--solid m-radio--brand">
+																																		<input type="radio" name="account_group" checked="" value="2">
+																																		Não
+																																		<span></span>
+																																	</label>
+																																	<label class="m-radio m-radio--solid m-radio--brand">
+																																		<input type="radio" name="account_group" value="2">
+																																		Sim
+																																		<span></span>
+																																	</label>
+																																</div>
+																																<span class="m-form__help">
+																																Porfavor selecione uma opção
+																																</span>
+																															</div> <br/>
+
+																															<div class="col-lg-6 m-form__group-sub">
+																																	<label class="form-control-label">
+																																			ImovelWeb?
+																																	</label>
+																																	<div class="m-radio-inline">
+																																		<label class="m-radio m-radio--solid m-radio--brand">
+																																			<input type="radio" name="account_group" checked="" value="2">
+																																			Não
+																																			<span></span>
+																																		</label>
+																																		<label class="m-radio m-radio--solid m-radio--brand">
+																																			<input type="radio" name="account_group" value="2">
+																																			Sim
+																																			<span></span>
+																																		</label>
+																																	</div>
+																																	<span class="m-form__help">
+																																	Porfavor selecione uma opção
+																																	</span>
+																																</div> <br/>
+		
+																			
+															
+															</div>
+														
+															
+														
+														</div>
+		
+		
+
+														
+
+
 									<!--end: Form Wizard Step 4-->
 									
 								</div>

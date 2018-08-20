@@ -23,6 +23,9 @@ var WizardDemo = function() {
                     phone: {
                         required: !0,
                     },
+                    site: {
+                        required: !0,
+                    },
                     address1: {
                         required: !0
                     },
@@ -131,8 +134,20 @@ var WizardDemo = function() {
                 }))
             })
         }
+
+    
     }
+
+
 }();
 jQuery(document).ready(function() {
     WizardDemo.init()
+});
+
+$('input[name="FlgPontua"]').change(function () {
+    if ($('input[name="account_group"]:checked').val() === "sim") {
+        $('#camposExtras').show();
+    } else {
+        $('#camposExtras').hide();
+    }
 });
