@@ -17,14 +17,16 @@ const routes: Routes = [
         ]
     }
 ];
-@NgModule({imports: [
-CommonModule,RouterModule.forChild(routes),LayoutModule
-],exports: [
-RouterModule
-],declarations: [
-WidgetsRecaptchaComponent
-]})
-export class WidgetsRecaptchaModule  {
+@NgModule({
+    imports: [
+        CommonModule, RouterModule.forChild(routes), LayoutModule
+    ], exports: [
+        RouterModule
+    ], declarations: [
+        WidgetsRecaptchaComponent
+    ]
+})
+export class WidgetsRecaptchaModule {
 
 
 

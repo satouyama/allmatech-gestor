@@ -9,30 +9,69 @@ import { AppComponent } from './app.component';
 import { ScriptLoaderService } from "./_services/script-loader.service";
 import { ThemeRoutingModule } from "./theme/theme-routing.module";
 import { AuthModule } from "./auth/auth.module";
-import { Config } from './config/config';
 import { HttpClientModule } from '@angular/common/http';
-import { RegistrationModule } from './auth/registration.module';
+import { ProdutosServices } from './_services/produtos.service';
+import { Config } from './config/config';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { UsuariosServices } from './_services/usuarios.service';
+import { PagerService } from './_services/page.service';
+import { CommonModule } from '@angular/common';
+import {
+    MatInputModule, MatPaginatorModule, MatTableDataSource, MatTableModule,
+    MatToolbarModule,
+    MatSortModule
+} from "@angular/material";
+import { DistribuidorasServices } from './_services/distribuidora.service';
+import { LocationService } from './_services/location.service';
 import { NgxMaskModule } from 'ngx-mask'
+import { EnderecoService } from "./_services/endereco.service";
+import { GerenteService } from "./_services/gerente.service";
+
+import { PedidoService } from './_services/pedidos.service';
+
+import { Utils } from "./models/utils";
+import { AvaliacaoService } from './_services/availiacao.service';
 
 
 @NgModule({
-  declarations: [
-ThemeComponent,
-    AppComponent,
-  ],
-  imports: [
-    NgxMaskModule.forRoot(),
-    LayoutModule,
-    BrowserModule,
-    BrowserAnimationsModule,
-    AppRoutingModule,
-    ThemeRoutingModule,
-    AuthModule,
-    RegistrationModule,
-    HttpClientModule,
-    
-  ],
-  providers: [ScriptLoaderService,Config],
-  bootstrap: [AppComponent]
+    declarations: [
+        ThemeComponent,
+        AppComponent
+    ],
+    imports: [
+        NgxMaskModule.forRoot(),
+        LayoutModule,
+        BrowserModule,
+        BrowserAnimationsModule,
+        AppRoutingModule,
+        ThemeRoutingModule,
+        AuthModule,
+        HttpClientModule,
+        FormsModule,
+        ReactiveFormsModule,
+        CommonModule,
+        MatToolbarModule,
+        MatInputModule,
+        MatTableModule,
+        MatPaginatorModule,
+        MatSortModule
+    ],
+    providers: [
+        ScriptLoaderService,
+        ProdutosServices,
+        Config,
+        Utils,
+        UsuariosServices,
+        PagerService,
+        DistribuidorasServices,
+        LocationService,
+        EnderecoService,
+        GerenteService,
+
+        PedidoService,
+        AvaliacaoService
+
+    ],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,8 +1,135 @@
 /* You can add global styles to this file, and also import other style files */
-.m-menu__link-icon {
-    color : white !important;
-  }
 
-  .m-menu__link-text {
-    color : white !important;
+/* Angular Material Theme */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+.dropdown-large{
+  margin-top: 10px !important;
+  width: 100% !important;
+  a{
+    width: 100% !important;
   }
+}
+.bilin-cor{
+  background: #430837 !important;
+}
+
+.bilin-cor-secundaria{
+  background: #31B7B6 !important;
+  border-color: #31B7B6
+}
+
+.bilin-cor-padrao{
+  background: #31B7B6 !important;
+  border-color: #31B7B6
+}
+
+.bilin-dark{
+  background: #2c2e3e !important;
+  border-color: #2c2e3e
+}
+
+.bilin-pic{
+
+  img{
+    border-radius: 100%;
+    max-height: 130px !important;
+  }
+}
+
+.pill-button{
+  margin-left: 0px !important;
+  li{
+    padding-left: 15px !important;
+    padding-right: 0px !important;
+  }
+}
+
+/* Material Angular Table Styles */
+.example-container {
+  display: flex;
+  flex-direction: column;
+  min-width: 300px;
+}
+
+.example-header {
+  min-height: 64px;
+  padding: 8px 24px 0;
+  background: white;
+  border-bottom: 1px solid rgba(0,0,0,.12);
+}
+
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+.mat-header-cell {
+  font-weight: 700;
+  color: rgba(0, 0, 0, .8) !important;
+}
+
+.mat-cell{
+  font-weight: 500;
+  text-align: inherit;
+  color: rgba(0,0,0,.6) !important;
+}
+
+.mat-table {
+  //overflow: auto;
+  //max-height: 500px;
+}
+
+.button-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+/* Fim Material Angular Table Styles */
+
+.modal-full{
+  width: 100%;
+  max-width: 100%;
+}
+
+.m-menu__link-icon {
+  color : white !important;
+}
+
+.m-menu__link-text {
+  color : white !important;
+}
+
+.m-aside-left.m-aside-left--skin-dark{
+  background-color: #6bb0c7  !important;
+}
+.m-brand.m-brand--skin-dark {
+  background: #6bb0c7 !important;
+}
+
+.m-menu__item--hover{
+  background-color: #1b93b1 !important;
+}
+
+.m-aside-menu .m-menu__nav>.m-menu__item>.m-menu__link .m-menu__ver-arrow{
+  color: white !important;
+}
+
+.m-aside-menu.m-aside-menu--skin-dark .m-menu__nav>.m-menu__item.m-menu__item--open{
+  background-color: #6bb0c7 !important;
+}
+
+.m--img-rounded{
+  max-width: 31px;
+  max-height: 31px;
+  min-width: 31px;
+  min-height: 31px;
+}
+
+.m--img-rounded-large{
+  max-width: 65px;
+  max-height: 65px;
+  min-width: 65px;
+  min-height: 65px;
+}

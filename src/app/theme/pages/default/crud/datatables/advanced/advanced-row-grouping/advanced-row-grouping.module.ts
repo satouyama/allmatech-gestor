@@ -17,14 +17,16 @@ const routes: Routes = [
         ]
     }
 ];
-@NgModule({imports: [
-CommonModule,RouterModule.forChild(routes),LayoutModule
-],exports: [
-RouterModule
-],declarations: [
-AdvancedRowGroupingComponent
-]})
-export class AdvancedRowGroupingModule  {
+@NgModule({
+    imports: [
+        CommonModule, RouterModule.forChild(routes), LayoutModule
+    ], exports: [
+        RouterModule
+    ], declarations: [
+        AdvancedRowGroupingComponent
+    ]
+})
+export class AdvancedRowGroupingModule {
 
 
 

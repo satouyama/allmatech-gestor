@@ -1,0 +1,39 @@
+.mat-column-idUsuario {
+    max-width: 50px;
+  }
+  
+  .mat-column-nome {
+    margin-right: 10px;
+  }
+  
+  .mat-column-telefone {
+    margin-right: 10px;
+  }
+  
+  .mat-column-email {
+    margin-right: 10px;
+    display:inline-block;
+    white-space: nowrap;
+    overflow:hidden !important;
+    text-overflow: ellipsis;
+  }
+  
+  .mat-column-creditos {
+    max-width: 100px;
+  }
+  
+  .mat-column-tokenPromo {
+    margin-right: 10px;
+  }
+  
+  .mat-column-actions {
+    max-width: 100px;
+  }
+  
+  .perfil-email{
+    display:inline-block;
+    white-space: nowrap;
+    width: 220px;
+    overflow:hidden !important;
+    text-overflow: ellipsis;
+  }

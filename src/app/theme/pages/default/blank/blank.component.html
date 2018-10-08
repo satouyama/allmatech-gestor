@@ -1,63 +1,170 @@
-<div class="m-portlet">
-    <div class="m-portlet__body  m-portlet__body--no-padding">
-        <div class="row m-row--no-padding m-row--col-separator-xl">
-            <div id="resumo-usuarios" class="col-xl-4">
-                <!--begin:: Widgets/Stats2-1 -->
-                <div  class="m-widget1">
-    
-                    <div class="m-widget1__item">
-                        <div class="row m-row--no-padding align-items-center">
-                            <div class="col-xs-10">
-                                <h3 class="m-widget1__title">
-                                    Vendas Totais
-                                </h3>
-                                <span class="m-widget1__desc">Valor total de todas as vendas</span>
-                            </div>
-                            <div class="col m--align-right">
-                                <span class="m-widget1__number m--font-brand">
-                                          R${{valorTotalVendas}}
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="m-widget1__item">
-                        <div class="row m-row--no-padding align-items-center">
-                            <div class="col-xs-10">
-                                <h3 class="m-widget1__title">
-                                    Vendas Diárias
-                                </h3>
-                                <span class="m-widget1__desc">Valor total das vendas do dia</span>
-                            </div>
-                            <div class="col m--align-right">
-                                <span class="m-widget1__number m--font-brand">
-                                    R${{valorTotalVendasDia}}
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="m-widget1__item" >
-                        <div class="row m-row--no-padding align-items-center">
-                            <div class="col-xs-10">
-                                <h3 class="m-widget1__title">
-                                    Total de clientes Cadastrados
-                                </h3>
-                                <span class="m-widget1__desc">Total de Clientes Cadastrados cadastrados</span>
-                            </div>
-                            <div class="col m--align-right">
-                                <span class="m-widget1__number m--font-danger">
-                                    {{totalUsers}}
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                  
-                </div>
-                <!--end:: Widgets/Stats2-1 -->
-            </div>
-       
-
+<div class="m-subheader">
+    <div class="d-flex align-items-center">
+        <div class="mr-auto">
+            <h3 class="m-subheader__title m-subheader__title--separator">
+                Dashboard
+            </h3>
+            <ul class="m-subheader__breadcrumbs m-nav m-nav--inline">
+                <li class="m-nav__item m-nav__item--home">
+                    <a href="#" class="m-nav__link m-nav__link--icon">
+                        <i class="m-nav__link-icon la la-home"></i>
+                    </a>
+                </li>
+            </ul>
         </div>
     </div>
+</div>
+<!-- END: Subheader -->
+<div class="m-content">
+
+    
+        
+
+
+
+
+    <div class="m-portlet">
+        <div class="m-portlet__body  m-portlet__body--no-padding">
+            <div class="row m-row--no-padding m-row--col-separator-xl">
+                <div id="resumo-usuarios" class="col-xl-4">
+                    
+                    <!--begin:: Widgets/Stats2-1 -->
+                    <div  class="m-widget1">
+                        <div class="m-widget1__item">
+                            <div class="m-widget14__header m--margin-bottom-30">
+                                <h3 class="m-widget1__title">
+                                    Vendas por Tipo
+                                </h3>
+                                <span class="m-widget1__desc">
+								Resumo das vendas por tipo de pagamento
+							</span>
+                            </div>
+                            <div class="m-widget14__chart" style="height:180px;">
+                                <canvas id="m_chart_vendas_tipo"></canvas>
+                            </div>
+                        </div>
+                        
+                        <div class="m-widget1__item">
+                            <div class="row m-row--no-padding align-items-center">
+                                <div class="col-xs-10">
+                                    <h3 class="m-widget1__title">
+                                        Vendas Totais
+                                    </h3>
+                                    <span class="m-widget1__desc">Valor total de todas as vendas</span>
+                                </div>
+                                <div class="col m--align-right">
+									<span class="m-widget1__number m--font-brand">
+                                              R${{valorTotalVendas}}
+									</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="m-widget1__item">
+                            <div class="row m-row--no-padding align-items-center">
+                                <div class="col-xs-10">
+                                    <h3 class="m-widget1__title">
+                                        Vendas Diárias
+                                    </h3>
+                                    <span class="m-widget1__desc">Valor total das vendas do dia</span>
+                                </div>
+                                <div class="col m--align-right">
+									<span class="m-widget1__number m--font-brand">
+                                        R${{valorTotalVendasDia}}
+									</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div  *ngIf="user.role == 'admin'" class="m-widget1__item" >
+                            <div class="row m-row--no-padding align-items-center">
+                                <div class="col-xs-10">
+                                    <h3 class="m-widget1__title">
+                                        Usuários
+                                    </h3>
+                                    <span class="m-widget1__desc">Total de usuários cadastrados</span>
+                                </div>
+                                <div class="col m--align-right">
+									<span class="m-widget1__number m--font-danger">
+										{{totalUsers}}
+									</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div  class="m-widget1__item" >
+                            <div class="row m-row--no-padding align-items-center">
+                                <div class="col-xs-10">
+                                    <h3 class="m-widget1__title">
+                                     Total de Clientes Cadastrados
+                                    </h3>
+                                    <span class="m-widget1__desc">Total de pedidos do dia</span>
+                                </div>
+                                <div class="col m--align-right">
+									<span class="m-widget1__number m--font-danger">
+										{{totalPedidosDia}}
+									</span>
+                                </div>
+                            </div>
+                        </div>
+                  
+                    </div>
+                    <!--end:: Widgets/Stats2-1 -->
+                </div>
+                <div id="resumo-pedidos" class="col-xl-8">
+                    <!--begin:: Widgets/Profit Share-->
+                    <div class="m-widget14">
+                        <div class="m-widget14__header">
+                            <h3 class="m-widget14__title">
+                                Resumo dos Pedidos
+                            </h3>
+                            <span class="m-widget14__desc">
+								Resumo dos Pedidos totais de uma distribuidora
+							</span>
+                        </div>
+                        <div class="row  align-items-center">
+                            <div class="col">
+                                <div id="m_chart_profit_share" class="m-widget14__chart" style="height: 160px">
+                                    <div class="m-widget14__stat">
+                                        {{totalUsers}}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="m-widget14__legends">
+                                    <div class="m-widget14__legend">
+                                        <span class="m-widget14__legend-bullet m--bg-info"></span>
+                                        <span class="m-widget14__legend-text">
+                                            {{totalUsers}} Pedidos
+										</span>
+                                    </div>
+                                    <div class="m-widget14__legend">
+                                        <span class="m-widget14__legend-bullet m--bg-success"></span>
+                                        <span class="m-widget14__legend-text">
+											{{totalUsers}} Tickets Cancelados
+										</span>
+                                    </div>
+                                    <div class="m-widget14__legend">
+                                        <span class="m-widget14__legend-bullet m--bg-warning"></span>
+                                        <span class="m-widget14__legend-text">
+											{{totalUsers}} Demandas pendentes/não entregues
+										</span>
+                                    </div>
+                                    <div class="m-widget14__legend">
+                                        <span class="m-widget14__legend-bullet m--bg-danger"></span>
+                                        <span class="m-widget14__legend-text">
+											{{totalUsers}} Demanda Cancelada
+										</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--end:: Widgets/Profit Share-->
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
 
     <div class="m-portlet">
         <div class="m-portlet__body  m-portlet__body--no-padding">
