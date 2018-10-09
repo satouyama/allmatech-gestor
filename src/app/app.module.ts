@@ -31,12 +31,16 @@ import { PedidoService } from './_services/pedidos.service';
 
 import { Utils } from "./models/utils";
 import { AvaliacaoService } from './_services/availiacao.service';
+import { ImobiliariaServices } from './_services/imobiliaria.service';
+
+
 
 
 @NgModule({
     declarations: [
         ThemeComponent,
-        AppComponent
+        AppComponent,
+      
     ],
     imports: [
         NgxMaskModule.forRoot(),
@@ -67,7 +71,7 @@ import { AvaliacaoService } from './_services/availiacao.service';
         LocationService,
         EnderecoService,
         GerenteService,
-
+        ImobiliariaServices,
         PedidoService,
         AvaliacaoService
 

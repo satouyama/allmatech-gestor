@@ -18,6 +18,10 @@ const routes: Routes = [
                 'loadChildren': '.\/pages\/default\/cliente\/cliente.module#ClienteModule',
             },
             {
+                'path': 'imobiliarias',
+                'loadChildren': '.\/pages\/default\/imobiliaria\/imobiliaria.module#ImobiliariaModule',
+            },
+            {
                 'path': '',
                 'redirectTo': 'index',
                 'pathMatch': 'full',

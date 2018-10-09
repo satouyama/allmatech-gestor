@@ -6,6 +6,7 @@ export class Config {
 
 
     private static readonly ENDPOINT = 'http://localhost:3000';
+    //private static readonly ENDPOINT = 'https://allmatech-dashboard.herokuapp.com/'
 
 
     constructor() { }

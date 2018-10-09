@@ -1,0 +1,406 @@
+<!-- BEGIN: Subheader -->
+<div class="m-subheader">
+	<div class="d-flex align-items-center">
+		<div class="mr-auto">
+			<h3 class="m-subheader__title m-subheader__title--separator">
+				Imobiliarias
+			</h3>
+		</div>
+		<a href="#" (click)="abrirNovoUsuario()" class="btn btn-primary bilin-cor-secundaria m-btn m-btn--pill m-btn--custom m-btn--icon m-btn--air">
+            <span>
+                <i class="la la-user"></i>
+                <span>
+                  Cadastrar Imobiliaria
+                </span>
+            </span>
+		</a>
+	</div>
+</div>
+<!-- END: Subheader -->
+<div class="m-content">
+
+	<div id="usuarios-table-list" class="example-container mat-elevation-z8">
+
+		<div class="example-header">
+			<mat-form-field>
+				<input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filtro">
+			</mat-form-field>
+		</div>
+
+		<mat-table [dataSource]="dataSource" matSort>
+
+			<ng-container matColumnDef="Codigo">
+				<mat-header-cell *matHeaderCellDef mat-sort-header> ID </mat-header-cell>
+				<mat-cell *matCellDef="let row"> {{row.Codigo}} </mat-cell>
+            </ng-container>
+            
+            <ng-container matColumnDef="Nome">
+				<mat-header-cell *matHeaderCellDef mat-sort-header> Nome </mat-header-cell>
+				<mat-cell *matCellDef="let row"> {{row.Nome}} </mat-cell>
+            </ng-container>
+            
+            <ng-container matColumnDef="NomeReduzido">
+				<mat-header-cell *matHeaderCellDef mat-sort-header> Nome Reduzido </mat-header-cell>
+				<mat-cell *matCellDef="let row"> {{row.NomeReduzido}} </mat-cell>
+            </ng-container>
+            
+            <ng-container matColumnDef="Ativo">
+				<mat-header-cell *matHeaderCellDef mat-sort-header> Ativo </mat-header-cell>
+				<mat-cell *matCellDef="let row"> 
+                        <a href="#" *ngIf="row.Ativo == true" class="btn sucesso btn-sm">
+                                <span>
+                                    <span > Ativo</span>
+                                    
+                                     
+                                </span>
+                            </a>
+
+                            <a href="#"  *ngIf="row.Ativo == false" class="btn btn-danger btn-sm">
+                                    
+                                        
+                                        <span> Não ativo</span>
+                                         
+                                   
+                                </a>
+                        </mat-cell>
+			</ng-container>
+
+			
+			
+
+	
+
+			<!-- Actions -->
+	
+
+			<mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+			<mat-row *matRowDef="let row; columns: displayedColumns;">
+			</mat-row>
+		</mat-table>
+
+		<mat-paginator [pageSizeOptions]="[10, 25, 100]"></mat-paginator>
+	</div>
+
+</div>
+
+<!-- ------- MODALS ------- -->
+<div class="modal fade" id="modal_perfil" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="exampleModalLongTitle">Perfil</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+
+				<div class="row m-row--col-separator-xl">
+					<div class="col-xl-4 col-lg-5">
+
+						<div class="m-card-profile">
+							<div class="m-card-profile__title m--hide">
+								Perfil
+							</div>
+							<div class="m-card-profile__pic">
+								<div class="m-card-profile__pic-wrapper">
+									<img src="./assets/app/media/img/users/userProfile.png" alt=""/>
+								</div>
+							</div>
+						
+						</div>
+
+						<hr/>
+
+						<h6>
+							Cadastrado em
+							<br/>
+							<small class="text-muted">{{utils.formatarDate(usuarioSelecionado.createdAt)}}</small>
+						</h6>
+
+						<h6>
+							Atualizado em
+							<br/>
+							<small class="text-muted">{{utils.formatarDate(usuarioSelecionado.updatedAt)}}</small>
+						</h6>
+
+					</div>
+					<div class="col-xl-8 col-lg-7">
+						<div class="row">
+							<div class="col-xl-12 col-lg-12">
+
+								<ul class="nav nav-tabs m-tabs m-tabs-line   m-tabs-line--left m-tabs-line--primary" role="tablist">
+									<li class="nav-item m-tabs__item">
+										<a class="nav-link m-tabs__link active" data-toggle="tab" href="#m_user_profile_tab_1" role="tab">
+											<i class="flaticon-share m--hide"></i>
+											Detalhes
+										</a>
+									</li>
+									<li class="nav-item m-tabs__item">
+										<a class="nav-link m-tabs__link" data-toggle="tab" href="#m_user_profile_tab_2" role="tab">
+											Endereços
+										</a>
+									</li>
+								</ul>
+
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-xl-12 col-lg-12">
+
+								<div class="tab-content">
+									<div class="tab-pane active" id="m_user_profile_tab_1">
+										<form class="m-form m-form--fit m-form--label-align-right">
+											<div class="m-portlet__body">
+
+												<div class="form-group m-form__group row">
+													<div class="col-10 ml-auto">
+														<h3 class="m-form__section">1. Detalhes Pessoais</h3>
+													</div>
+												</div>
+
+												<div class="form-group m-form__group row">
+													<label for="input-nome" class="col-4 col-form-label">Nome Completo</label>
+													<div class="col-8">
+														<input id="input-nome" name="input-nome" class="form-control m-input" [(ngModel)]="usuarioSelecionado.nome" type="text" disabled="disabled">
+													</div>
+												</div>
+												<div class="form-group m-form__group row">
+													<label for="input-email" class="col-4 col-form-label">Email</label>
+													<div class="col-8">
+														<input id="input-email" name="input-email" class="form-control m-input" [(ngModel)]="usuarioSelecionado.email" type="text" disabled="disabled">
+													</div>
+												</div>
+												<div class="form-group m-form__group row">
+													<label for="input-cpf" class="col-4 col-form-label">CPF</label>
+													<div class="col-8">
+														<input id="input-cpf" name="input-cpf" class="form-control m-input" [(ngModel)]="usuarioSelecionado.cpf" type="text" disabled="disabled">
+													</div>
+												</div>
+												<div class="form-group m-form__group row">
+													<label for="input-telefone" class="col-4 col-form-label">Telefone</label>
+													<div class="col-8">
+														<input id="input-telefone" name="input-telefone" class="form-control m-input" [(ngModel)]="usuarioSelecionado.telefone" type="text" disabled="disabled">
+													</div>
+												</div>
+												<div class="form-group m-form__group row">
+													<label for="input-token" class="col-4 col-form-label">Token de Indicação</label>
+													<div class="col-8">
+														<input id="input-token" name="input-token" class="form-control m-input" [(ngModel)]="usuarioSelecionado.tokenPromo" type="text" disabled="disabled">
+													</div>
+												</div>
+												<div class="form-group m-form__group row">
+													<label for="input-creditos" class="col-4 col-form-label">Créditos</label>
+													<div class="col-8">
+														<input id="input-creditos" name="input-creditos" class="form-control m-input" [(ngModel)]="usuarioSelecionado.creditos" type="text" disabled="disabled">
+													</div>
+												</div>
+
+											</div>
+										</form>
+									</div>
+									<div class="tab-pane " id="m_user_profile_tab_2">
+										<form class="m-form m-form--fit m-form--label-align-right">
+											<div class="m-portlet__body">
+
+												<div *ngFor="let end of usuarioSelecionado.novoEnderecos">
+												
+
+													<div class="form-group m-form__group row">
+														<label class="col-4 col-form-label">Endereço</label>
+														<div class="col-8">
+															<input  class="form-control m-input" value="{{end.endereco}}, {{end.numero}}, {{end.novoBairro.nome}}, {{end.cep}}" type="text" disabled="disabled">
+														</div>
+													</div>
+
+													<div class="form-group m-form__group row">
+														<label class="col-4 col-form-label">Referência</label>
+														<div class="col-8">
+															<input class="form-control m-input" value="{{end.referencia}}" type="text" disabled="disabled">
+														</div>
+													</div>
+
+													<br/>
+												</div>
+
+												<div *ngFor="let end of usuarioSelecionado.enderecos">
+													<div class="form-group m-form__group row">
+														<div class="col-10 ml-auto">
+															<h3 class="m-form__section">{{end.titulo}}</h3>
+														</div>
+													</div>
+
+													<div class="form-group m-form__group row">
+														<label  class="col-4 col-form-label">Endereço</label>
+														<div class="col-8">
+															<input  class="form-control m-input" value="{{end.endereco}}, {{end.numero}}, {{end.cidade.nome}}, {{end.cep}}" type="text" disabled="disabled">
+														</div>
+													</div>
+
+													<div class="form-group m-form__group row">
+														<label  class="col-4 col-form-label">Referência</label>
+														<div class="col-8">
+															<input class="form-control m-input" value="{{end.referencia}}" type="text" disabled="disabled">
+														</div>
+													</div>
+
+													<br/>
+												</div>
+
+											</div>
+										</form>
+									</div>
+								</div>
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+				<button type="button" class="btn btn-primary m--hide">Save changes</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade" id="m_modal_4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-lg" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="exampleModalLabel">
+					Novo Usuário
+				</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">
+                            &times;
+                        </span>
+				</button>
+			</div>
+			<div class="modal-body">
+
+				<div class="form-group m-form__group" >
+					<label for="usuario-nome" class="form-control-label">
+						Nome
+					</label>
+					<div class="m-input-icon m-input-icon--left">
+						<input id="usuario-nome" placeholder="Digite o nome do Usuário" type="text" class="form-control" [(ngModel)]= "novoUsuario.nome" >
+						<span class="m-input-icon__icon m-input-icon__icon--left"><span><i class="la la-user"></i></span></span>
+					</div>
+				</div>
+
+				<div class="form-group m-form__group">
+					<label for="usuario-email" class="form-control-label">
+						Email
+					</label>
+					<div class="m-input-icon m-input-icon--left">
+						<input id="usuario-email" placeholder="Digite o email de login" type="text" class="form-control" [(ngModel)]= "novoUsuario.email" >
+						<span class="m-input-icon__icon m-input-icon__icon--left"><span><i class="flaticon-email"></i></span></span>
+					</div>
+				</div>
+
+				<!--
+				<div class="form-group m-form__group">
+					<label for="usuario-senha" class="form-control-label">
+						Senha
+					</label>
+					<div class="m-input-icon m-input-icon--left">
+						<input type="password" class="form-control" placeholder="Digite a senha de login" [(ngModel)]= "novoUsuario.senha" id="usuario-senha">
+						<span class="m-input-icon__icon m-input-icon__icon--left"><span><i class="la la-key"></i></span></span>
+					</div>
+				</div>
+				-->
+
+				<div class="form-group m-form__group">
+					<label for="usuario-cpf" class="form-control-label">
+						CPF
+					</label>
+					<div class="m-input-icon m-input-icon--left">
+						<input id="usuario-cpf" type="text" placeholder="Digite o CPF do Usuário" class="form-control" [(ngModel)]= "novoUsuario.cpf" [dropSpecialCharacters]="false" mask="000.000.000-00">
+						<span class="m-input-icon__icon m-input-icon__icon--left"><span><i class="la la-comment"></i></span></span>
+					</div>
+				</div>
+
+				<div class="form-group m-form__group">
+					<label for="usuario-telefone" class="form-control-label">
+						Telefone
+					</label>
+					<div class="m-input-icon m-input-icon--left">
+						<input id="usuario-telefone" type="text" placeholder="Digite o Telefone do Usuário" class="form-control" [(ngModel)]= "novoUsuario.telefone" [dropSpecialCharacters]="false" mask="(00)00000-0000">
+						<span class="m-input-icon__icon m-input-icon__icon--left"><span><i class="la la-phone"></i></span></span>
+					</div>
+				</div>
+
+				<hr/>
+
+				<div class="form-group m-form__group" >
+					<label for="user-addr" class="form-control-label">
+						Endereço
+					</label>
+					<div class="m-input-icon m-input-icon--left">
+						<input type="text" class="form-control" id="user-addr" placeholder="Digite o Endereço" [(ngModel)]="novoUsuario.endereco">
+						<span class="m-input-icon__icon m-input-icon__icon--left"><span><i class="la la-map-marker"></i></span></span>
+					</div>
+				</div>
+
+				<div class="form-group m-form__group" >
+					<label for="user-addr-nm" class="form-control-label">
+						Número
+					</label>
+					<div class="m-input-icon m-input-icon--left">
+						<input type="number" class="form-control" id="user-addr-nm" placeholder="Digite o Número" [(ngModel)]="novoUsuario.numero">
+						<span class="m-input-icon__icon m-input-icon__icon--left"><span><i class="la la-map-marker"></i></span></span>
+					</div>
+				</div>
+
+
+				<div class="form-group m-form__group" >
+					<label for="user-cep" class="form-control-label">
+						CEP
+					</label>
+					<div class="m-input-icon m-input-icon--left">
+						<input type="text" class="form-control" id="user-cep" placeholder="Digite o CEP" [dropSpecialCharacters]="false" mask="00000-000"  [(ngModel)]="novoUsuario.cep">
+						<span class="m-input-icon__icon m-input-icon__icon--left"><span><i class="la la-map-marker"></i></span></span>
+					</div>
+				</div>
+
+				<div class="form-group m-form__group">
+					<label for="product-city" class="form-control-label">
+						Bairro
+					</label>
+					<div class="m-input-icon m-input-icon--left">
+						<!--<select [(ngModel)]="selectedLocation.idCidade" class="form-control m-bootstrap-select m_selectpicker" data-live-search="true" id="product-city">-->
+						<select [(ngModel)]="novoUsuario.idNovoBairro" class="form-control m-input" id="product-city">
+							<option>Selecione o Bairro</option>
+							<option *ngFor="let b of bairros" [ngValue]="b.ID">{{b.nome}}</option>
+						</select>
+						<span class="m-input-icon__icon m-input-icon__icon--left"><span><i class="la la-search"></i></span></span>
+					</div>
+				</div>
+
+				<div class="form-group m-form__group" >
+					<label for="user-cep" class="form-control-label">
+						Referência
+					</label>
+					<div class="m-input-icon m-input-icon--left">
+						<input type="text" class="form-control" id="user-cep" placeholder="Digite a Referência" [(ngModel)]="novoUsuario.referencia">
+						<span class="m-input-icon__icon m-input-icon__icon--left"><span><i class="la la-map-marker"></i></span></span>
+					</div>
+				</div>
+
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-dismiss="modal">
+					Fechar
+				</button>
+				<button type="button" (click)="cadastrarUsuario()" class="btn btn-primary bilin-cor-secundaria">
+					Cadastrar Usuário
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
