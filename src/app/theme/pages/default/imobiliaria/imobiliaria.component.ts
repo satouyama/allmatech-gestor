@@ -22,11 +22,11 @@ declare let $: any;
 })
 export class ImobiliariaCompononent implements AfterViewInit {
     displayedColumns = [
-       'Codigo',
-       'Nome',
-       'NomeReduzido',
-       'Ativo'
-      
+        'Codigo',
+        'Nome',
+        'NomeReduzido',
+        'Ativo'
+
     ];
     dataSource: MatTableDataSource<UsuarioData>;
 
@@ -44,7 +44,7 @@ export class ImobiliariaCompononent implements AfterViewInit {
     private readonly REFATORADO = 'refatorado';
 
     constructor(public http: HttpClient, public usuariosServices: UsuariosServices,
-        public utils: Utils, public locationService: LocationService, public imobiliaria : ImobiliariaServices) {
+        public utils: Utils, public locationService: LocationService, public imobiliaria: ImobiliariaServices) {
 
         this.limparNovoUsuario();
         this.limparUsuarioSelecionado();
@@ -58,9 +58,9 @@ export class ImobiliariaCompononent implements AfterViewInit {
     atualizarListImobiliaria() {
         Helpers.setBlockLoading('#usuarios-table-list', true);
         this.imobiliaria.getImobiliaria().subscribe(
-          
+
             (data: any) => {
-                let imobiliaria = data; 
+                let imobiliaria = data;
                 console.log(imobiliaria);
 
                 this.dataSource = new MatTableDataSource(imobiliaria);
@@ -74,7 +74,7 @@ export class ImobiliariaCompononent implements AfterViewInit {
             });
     }
 
-  
+
     applyFilter(filterValue: string) {
         filterValue = filterValue.trim(); // Remove whitespace
         filterValue = filterValue.toLowerCase(); // Datasource defaults to lowercase matches
@@ -106,7 +106,7 @@ export class ImobiliariaCompononent implements AfterViewInit {
                     type: 'success',
                     animation: true
                 });
-               
+
             },
             error => {
                 Helpers.setBlockLoading('#usuarios-table-list', false);

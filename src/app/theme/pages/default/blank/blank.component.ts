@@ -41,7 +41,7 @@ export class BlankComponent implements OnInit {
     constructor(public pedidosService: ProdutosServices,
         public distribuidoraService: DistribuidorasServices, private _script: ScriptLoaderService,
         public usuarioService: UsuariosServices, public pedidoService: PedidoService) {
-          
+
         this.user = JSON.parse(localStorage.getItem('currentUser'));
         if (this.user.role == 'admin') {
             this.carregarTotalUsuarios();
@@ -228,7 +228,7 @@ export class BlankComponent implements OnInit {
     }
 
     carregarTotalUsuarios() {
-         
+
         $('#m_modal_6').modal("hide")
         this.usuarioService.getUsuarios().subscribe(
             (res: any) => {

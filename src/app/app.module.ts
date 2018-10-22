@@ -40,7 +40,7 @@ import { ImobiliariaServices } from './_services/imobiliaria.service';
     declarations: [
         ThemeComponent,
         AppComponent,
-      
+
     ],
     imports: [
         NgxMaskModule.forRoot(),

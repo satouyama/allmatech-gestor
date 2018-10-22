@@ -58,7 +58,7 @@ export class ImobiliariaServices {
         return this.http.delete(this.ENDPOINT + '/admin/distribuidoras/' + idDistribuidora, Config.getHeader());
     }
     getImobiliaria() {
-        return this.http.get(this.ENDPOINT + '/admin/imobiliaria/' , Config.getHeader());
+        return this.http.get(this.ENDPOINT + '/admin/imobiliaria/', Config.getHeader());
     }
 
     vincularEndereco(endereco) {

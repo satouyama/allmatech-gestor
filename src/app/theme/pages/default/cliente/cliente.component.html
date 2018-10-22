@@ -56,7 +56,7 @@
 								</span>
 							</a>	
 
-							<a *ngIf="row.Bloqueado == false" href="#" class="btn btn-primary btn-sm m-btn  m-btn m-btn--icon" >
+							<a *ngIf="row.Bloqueado == false" href="#" class="btn sucesso btn-sm" >
 									<span>
 										<i class="fa fa-coffee"></i>
 										<span>Ativo </span>
@@ -78,9 +78,7 @@
 						<a href="#" class="m-portlet__nav-link btn m-btn m-btn--hover-brand m-btn--icon m-btn--icon-only m-btn--pill m--hide" title="Editar">
 							<i class="flaticon-edit-1"></i>
 						</a>
-						<a href="#" (click)="deleteUsuario(row)" class="m-portlet__nav-link btn m-btn m-btn--hover-info m-btn--icon m-btn--icon-only m-btn--pill" title="Perfil">
-							<i class="flaticon-delete-1"></i>
-						</a>
+					
 					</div>
 				</mat-cell>
 			</ng-container>

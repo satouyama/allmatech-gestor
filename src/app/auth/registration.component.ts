@@ -202,7 +202,7 @@ export class RegistrationComponent implements OnInit {
                     fullname: {
                         required: true,
                     },
-                  
+
                     password: {
                         required: true,
                     },

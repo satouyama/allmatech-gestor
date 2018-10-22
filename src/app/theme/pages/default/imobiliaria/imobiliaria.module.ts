@@ -46,7 +46,7 @@ const routes: Routes = [
         MatTableModule,
         MatSortModule, MatPaginatorModule,
     ], declarations: [
-       ImobiliariaCompononent
+        ImobiliariaCompononent
     ]
 })
 export class ImobiliariaModule {

@@ -21,11 +21,11 @@ declare let $: any;
 })
 export class ClienteCompononent implements AfterViewInit {
     displayedColumns = [
-       'Codigo',
-       'Login',
-       'Senha',
-       'Bloqueado',
-       'actions'
+        'Codigo',
+        'Login',
+        'Senha',
+        'Bloqueado',
+        'actions'
     ];
     dataSource: MatTableDataSource<UsuarioData>;
 
@@ -65,9 +65,9 @@ export class ClienteCompononent implements AfterViewInit {
     atualizarListUsuarios() {
         Helpers.setBlockLoading('#usuarios-table-list', true);
         this.usuariosServices.getUsuarios().subscribe(
-          
+
             (data: any) => {
-                let usuarios = data; 
+                let usuarios = data;
                 console.log(usuarios);
 
                 this.dataSource = new MatTableDataSource(usuarios);
@@ -81,7 +81,7 @@ export class ClienteCompononent implements AfterViewInit {
             });
     }
 
-  
+
     applyFilter(filterValue: string) {
         filterValue = filterValue.trim(); // Remove whitespace
         filterValue = filterValue.toLowerCase(); // Datasource defaults to lowercase matches
