@@ -43,16 +43,8 @@ export class BlankComponent implements OnInit {
         public usuarioService: UsuariosServices, public pedidoService: PedidoService) {
 
         this.user = JSON.parse(localStorage.getItem('currentUser'));
-        if (this.user.role == 'admin') {
-            this.carregarTotalUsuarios();
-            this.pedidosDia();
-        }
-
-        if (this.user.role == 'dist') {
-            this.carregarTotalUsuarios();
-            this.pedidosDia();
-        }
-
+     
+         
 
     }
 

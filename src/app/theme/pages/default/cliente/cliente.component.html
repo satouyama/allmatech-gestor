@@ -65,6 +65,12 @@
 				</mat-cell>
 			</ng-container>
 
+			<ng-container matColumnDef="CodigoGrupo">
+				<mat-header-cell *matHeaderCellDef mat-sort-header>CodigoGrupo</mat-header-cell>
+				<mat-cell *matCellDef="let row">
+					<a class="m-link">{{row.imobiliaria?.CodigoGrupo}}</a>
+				</mat-cell>
+			</ng-container>
 	
 
 			<!-- Actions -->
@@ -72,12 +78,17 @@
 				<mat-header-cell *matHeaderCellDef> Ações </mat-header-cell>
 				<mat-cell *matCellDef="let row" >
 					<div class="button-row">
-						<a href="#" (click)="abrirPerfil(row)" class="m-portlet__nav-link btn m-btn m-btn--hover-info m-btn--icon m-btn--icon-only m-btn--pill" title="Perfil">
-							<i class="flaticon-user"></i>
+						<a href="#" (click)="publicarLugarCerto(row)" class="m-portlet__nav-link btn m-btn m-btn--hover-info m-btn--icon m-btn--icon-only m-btn--pill" title="Carga LugarCerto">
+							<i class="socicon-openid"></i>
 						</a>
-						<a href="#" class="m-portlet__nav-link btn m-btn m-btn--hover-brand m-btn--icon m-btn--icon-only m-btn--pill m--hide" title="Editar">
-							<i class="flaticon-edit-1"></i>
+						<a href="#" (click)="publicarWimoveis(row)" class="m-portlet__nav-link btn m-btn m-btn--hover-info m-btn--icon m-btn--icon-only m-btn--pill" title="Carga WIMOVEIS">
+							<i class="flaticon-truck"></i>
 						</a>
+
+						<a href="#" (click)="publicarUbiPlaces(row)" class="m-portlet__nav-link btn m-btn m-btn--hover-info m-btn--icon m-btn--icon-only m-btn--pill" title="Carga UbiPlaces">
+							<i class="socicon-telegram"></i>
+						</a>
+					
 					
 					</div>
 				</mat-cell>

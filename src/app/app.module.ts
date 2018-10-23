@@ -32,6 +32,8 @@ import { PedidoService } from './_services/pedidos.service';
 import { Utils } from "./models/utils";
 import { AvaliacaoService } from './_services/availiacao.service';
 import { ImobiliariaServices } from './_services/imobiliaria.service';
+import { CargaService } from './_services/carga.service';
+
 
 
 
@@ -40,6 +42,7 @@ import { ImobiliariaServices } from './_services/imobiliaria.service';
     declarations: [
         ThemeComponent,
         AppComponent,
+      
 
     ],
     imports: [
@@ -73,7 +76,8 @@ import { ImobiliariaServices } from './_services/imobiliaria.service';
         GerenteService,
         ImobiliariaServices,
         PedidoService,
-        AvaliacaoService
+        AvaliacaoService,
+        CargaService
 
     ],
     bootstrap: [AppComponent]

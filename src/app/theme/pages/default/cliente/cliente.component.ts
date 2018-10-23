@@ -8,6 +8,7 @@ import { MatPaginator, MatSort, MatTableDataSource } from "@angular/material";
 import { Helpers } from '../../../../helpers';
 import { LocationService } from '../../../../_services/location.service';
 import { UsuariosServices } from '../../../../_services/usuarios.service';
+import { CargaService } from '../../../../_services/carga.service';
 
 
 declare let swal: any;
@@ -25,6 +26,7 @@ export class ClienteCompononent implements AfterViewInit {
         'Login',
         'Senha',
         'Bloqueado',
+        'CodigoGrupo',
         'actions'
     ];
     dataSource: MatTableDataSource<UsuarioData>;
@@ -43,7 +45,7 @@ export class ClienteCompononent implements AfterViewInit {
     private readonly REFATORADO = 'refatorado';
 
     constructor(public http: HttpClient, public usuariosServices: UsuariosServices,
-        public utils: Utils, public locationService: LocationService) {
+        public utils: Utils, public locationService: LocationService, public cargaService : CargaService) {
 
         this.limparNovoUsuario();
         this.limparUsuarioSelecionado();
@@ -62,14 +64,78 @@ export class ClienteCompononent implements AfterViewInit {
         Helpers.setBlockLoading('#usuarios-table-list', true);
     }
 
+    publicarWimoveis(row){
+        this.cargaService.getWimoveis(row.imobiliaria.CodigoGrupo).subscribe(
+            (res : any) =>{
+                swal({
+                    title: 'Sucesso!',
+                    text: 'CARGA PARA WIMOVEIS REALIZADA COM SUCESSO!',
+                    type: 'success',
+                    animation: true
+                });
+            },
+            error =>{
+                swal({
+                    title: 'Erro!',
+                    text: 'Não foi possivel realizar a carga, tente novamente',
+                    type: 'warning',
+                    animation: true
+                })
+            }
+        )
+    }
+
+    publicarUbiPlaces(row){
+        this.cargaService.getUbiPlaces(row.imobiliaria.CodigoGrupo).subscribe(
+            (res : any) =>{
+                swal({
+                    title: 'Sucesso!',
+                    text: 'CARGA PARA UBIPLACES REALIZADA COM SUCESSO!',
+                    type: 'success',
+                    animation: true
+                });
+            },
+            error =>{
+                swal({
+                    title: 'Erro!',
+                    text: 'Não foi possivel realizar a carga, tente novamente',
+                    type: 'warning',
+                    animation: true
+                })
+            }
+        )
+    }
+
+
+    
+    publicarLugarCerto(row){
+        this.cargaService.getLugarCerto(row.imobiliaria.CodigoGrupo).subscribe(
+            (res : any) =>{
+                swal({
+                    title: 'Sucesso!',
+                    text: 'CARGA PARA LugarCerto REALIZADA COM SUCESSO!',
+                    type: 'success',
+                    animation: true
+                });
+            },
+            error =>{
+                swal({
+                    title: 'Erro!',
+                    text: 'Não foi possivel realizar a carga, tente novamente',
+                    type: 'warning',
+                    animation: true
+                })
+            }
+        )
+    }
+
     atualizarListUsuarios() {
         Helpers.setBlockLoading('#usuarios-table-list', true);
         this.usuariosServices.getUsuarios().subscribe(
 
             (data: any) => {
                 let usuarios = data;
-                console.log(usuarios);
-
+        
                 this.dataSource = new MatTableDataSource(usuarios);
                 this.dataSource.paginator = this.paginator;
                 this.dataSource.sort = this.sort;
@@ -101,30 +167,7 @@ export class ClienteCompononent implements AfterViewInit {
     }
 
     cadastrarUsuario() {
-        Helpers.setBlockLoading('#usuarios-table-list', true);
-        this.usuariosServices.cadastrarUsuario(this.novoUsuario).subscribe(
-            data => {
-                this.limparNovoUsuario();
-                Helpers.setBlockLoading('#usuarios-table-list', false);
-                $('#m_modal_4').modal('hide');
-                swal({
-                    title: 'Sucesso!',
-                    text: 'Usuário cadastrado com sucesso!',
-                    type: 'success',
-                    animation: true
-                });
-                this.atualizarListUsuarios();
-            },
-            error => {
-                Helpers.setBlockLoading('#usuarios-table-list', false);
-                swal({
-                    title: 'Erro!',
-                    text: 'Não foi possível cadastrar o usuário, tente novamente!',
-                    type: 'warning',
-                    animation: true
-                })
-            }
-        );
+
     }
 
     limparUsuarioSelecionado() {
