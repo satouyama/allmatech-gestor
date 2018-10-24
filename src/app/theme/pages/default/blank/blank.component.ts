@@ -3,8 +3,8 @@ import { DistribuidorasServices } from '../../../../_services/distribuidora.serv
 import { ProdutosServices } from '../../../../_services/produtos.service';
 import { Helpers } from "../../../../helpers";
 import { ScriptLoaderService } from '../../../../_services/script-loader.service';
-import { UsuariosServices } from '../../../../_services/usuarios.service';
 import { PedidoService } from '../../../../_services/pedidos.service';
+import { UsuariosServices } from '../../../../_services/usuarios.services';
 
 declare let $: any;
 declare let Chartist: any;
@@ -40,7 +40,7 @@ export class BlankComponent implements OnInit {
 
     constructor(public pedidosService: ProdutosServices,
         public distribuidoraService: DistribuidorasServices, private _script: ScriptLoaderService,
-        public usuarioService: UsuariosServices, public pedidoService: PedidoService) {
+       public pedidoService: PedidoService, public usuarioServices : UsuariosServices) {
 
         this.user = JSON.parse(localStorage.getItem('currentUser'));
      
@@ -222,7 +222,7 @@ export class BlankComponent implements OnInit {
     carregarTotalUsuarios() {
 
         $('#m_modal_6').modal("hide")
-        this.usuarioService.getUsuarios().subscribe(
+        this.usuarioServices.getUsuarios().subscribe(
             (res: any) => {
                 this.totalUsers = res.length;
             },

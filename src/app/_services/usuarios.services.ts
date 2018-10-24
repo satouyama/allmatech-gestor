@@ -29,4 +29,9 @@ export class UsuariosServices {
         return this.http.delete(this.ENDPOINT + '/admin/usuarios/' + idUsuario, Config.getHeader());
     }
 
+    updateAtivo(ativo : boolean, Codigo){
+   
+        return this.http.put(this.ENDPOINT + '/admin/imobiliaria/' + Codigo, {ativo : ativo}, Config.getHeader());
+    }
+
 }

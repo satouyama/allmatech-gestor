@@ -7,8 +7,9 @@ import { MatPaginator, MatSort, MatTableDataSource } from "@angular/material";
 
 import { Helpers } from '../../../../helpers';
 import { LocationService } from '../../../../_services/location.service';
-import { UsuariosServices } from '../../../../_services/usuarios.service';
+
 import { ImobiliariaServices } from '../../../../_services/imobiliaria.service';
+import { UsuariosServices } from '../../../../_services/usuarios.services';
 
 
 declare let swal: any;
@@ -72,6 +73,38 @@ export class ImobiliariaCompononent implements AfterViewInit {
                 Helpers.setBlockLoading('#usuarios-table-list', false);
                 console.log(error);
             });
+    }
+
+
+    updateAtivo(row){
+        var ativos;
+        var Codigo = row.Codigo;
+        if(row.Ativo == true){
+            ativos = false;
+        } else {
+            ativos = true;
+        }
+
+
+        this.usuariosServices.updateAtivo(ativos, Codigo).subscribe(
+        (res : any) =>{
+            swal({
+                title: 'Sucesso!',
+                text: 'Usuário atualizado com sucesso!',
+                type: 'success',
+                animation: true
+            });
+            this.atualizarListImobiliaria();
+        },
+        error =>{
+            swal({
+                title: 'Erro!',
+                text: 'Não foi possível alterar o usuário, tente novamente!',
+                type: 'warning',
+                animation: true
+            })
+        }
+        )
     }
 
 

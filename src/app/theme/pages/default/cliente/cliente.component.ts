@@ -7,8 +7,9 @@ import { MatPaginator, MatSort, MatTableDataSource } from "@angular/material";
 
 import { Helpers } from '../../../../helpers';
 import { LocationService } from '../../../../_services/location.service';
-import { UsuariosServices } from '../../../../_services/usuarios.service';
+
 import { CargaService } from '../../../../_services/carga.service';
+import { UsuariosServices } from '../../../../_services/usuarios.services';
 
 
 declare let swal: any;

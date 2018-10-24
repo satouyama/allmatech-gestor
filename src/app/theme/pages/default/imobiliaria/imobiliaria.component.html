@@ -47,7 +47,7 @@
             <ng-container matColumnDef="Ativo">
 				<mat-header-cell *matHeaderCellDef mat-sort-header> Ativo </mat-header-cell>
 				<mat-cell *matCellDef="let row"> 
-                        <a href="#" *ngIf="row.Ativo == true" class="btn sucesso btn-sm">
+                        <a href="#" *ngIf="row.Ativo == true" (click)="updateAtivo(row)" class="btn sucesso btn-sm">
                                 <span>
                                     <span > Ativo</span>
                                     
@@ -55,7 +55,7 @@
                                 </span>
                             </a>
 
-                            <a href="#"  *ngIf="row.Ativo == false" class="btn btn-danger btn-sm">
+                            <a href="#"  *ngIf="row.Ativo == false" (click)="updateAtivo(row)" class="btn btn-danger btn-sm">
                                     
                                         
                                         <span> Não ativo</span>

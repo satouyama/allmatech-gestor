@@ -13,7 +13,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { ProdutosServices } from './_services/produtos.service';
 import { Config } from './config/config';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { UsuariosServices } from './_services/usuarios.service';
 import { PagerService } from './_services/page.service';
 import { CommonModule } from '@angular/common';
 import {
@@ -33,6 +32,7 @@ import { Utils } from "./models/utils";
 import { AvaliacaoService } from './_services/availiacao.service';
 import { ImobiliariaServices } from './_services/imobiliaria.service';
 import { CargaService } from './_services/carga.service';
+import { UsuariosServices } from './_services/usuarios.services';
 
 
 
@@ -68,7 +68,6 @@ import { CargaService } from './_services/carga.service';
         ProdutosServices,
         Config,
         Utils,
-        UsuariosServices,
         PagerService,
         DistribuidorasServices,
         LocationService,
@@ -77,7 +76,8 @@ import { CargaService } from './_services/carga.service';
         ImobiliariaServices,
         PedidoService,
         AvaliacaoService,
-        CargaService
+        CargaService,
+       UsuariosServices
 
     ],
     bootstrap: [AppComponent]
